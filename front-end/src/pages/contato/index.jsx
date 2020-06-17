@@ -6,7 +6,6 @@ export default class Contato extends Component {
     super(props);
 
     this.state = {
-      dadosRecebidos: false,
       mensagem: {
         tipo: "",
         conteudo: [],
@@ -31,9 +30,9 @@ export default class Contato extends Component {
     });
 
     const data = await response.json();
+    console.log(data)
 
     this.setState({ 
-      dadosRecebidos: true,
       mensagem: data.mensagem 
     });
   };
@@ -41,13 +40,16 @@ export default class Contato extends Component {
   render() {
     const { tipo, conteudo } = this.state.mensagem;
     const Mensagens = conteudo.map((value, index) => {
+      if(tipo === "error"){
+        return <Mensagem key={index} tipo={tipo} conteudo={value.msg} />;
+      }
       return <Mensagem key={index} tipo={tipo} conteudo={value} />;
     });
     return (
       <main>
+        {Mensagens}
         <section>
           <div className="container">
-            {Mensagens}
             <h1 className="title">Entre em contato</h1>
             <hr />
             <div className="container-formulario">
@@ -59,6 +61,7 @@ export default class Contato extends Component {
                   id="nome"
                   placeholder="Nome Completo"
                   autoFocus
+                  minLength="5"
                   maxLength="50"
                   required
                 />
@@ -76,6 +79,7 @@ export default class Contato extends Component {
                   name="assunto"
                   id="assunto"
                   placeholder="Assunto"
+                  minLength="5"
                   maxLength="25"
                   required
                 />
@@ -87,6 +91,7 @@ export default class Contato extends Component {
                   cols="30"
                   rows="8"
                   maxLength="250"
+                  minLength="10"
                   required
                 ></textarea>
                 <input type="submit" value="Enviar" className="btn" />
