@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from "react-router-dom";
 import Masonry from "../utils/mansory-custom";
 
 import flappyBirdImagem from "../uploads/imagens/flappybird.webp";
@@ -29,7 +30,7 @@ export default class Trabalhos extends Component {
     }
     return (
       <div id="mansory-grid" className="mansory-grid">
-        <a href="/trabalhos/flappybird" className="mansory-item">
+        <Link to="/trabalhos/flappybird" className="mansory-item">
           <article>
             <figure>
               <img
@@ -47,9 +48,9 @@ export default class Trabalhos extends Component {
               </figcaption>
             </figure>
           </article>
-        </a>
+        </Link>
 
-        <a href="/trabalhos/jogo-da-nave" className="mansory-item">
+        <Link to="/trabalhos/jogo-da-nave" className="mansory-item">
           <article>
             <figure>
               <img
@@ -66,9 +67,9 @@ export default class Trabalhos extends Component {
               </figcaption>
             </figure>
           </article>
-        </a>
+        </Link>
 
-        <a href="/trabalhos/super-mario" className="mansory-item">
+        <Link to="/trabalhos/super-mario" className="mansory-item">
           <article>
             <figure>
               <img
@@ -85,7 +86,7 @@ export default class Trabalhos extends Component {
               </figcaption>
             </figure>
           </article>
-        </a>
+        </Link>
       </div>
     );
   }
