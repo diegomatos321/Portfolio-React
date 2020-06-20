@@ -6,7 +6,7 @@ export default function JogoDaNaveSEO() {
   return (
     <Helmet>
       {/* SEO Geral */}
-      <title>Diego Matos | Jogo da Nave</title>
+      <title>Jogo da Nave | Desenvolvedor Diego Matos</title>
       <meta name="description" content="Avalie esse trabalho feito por Diego Matos com seus alunos: O desenvolvimento, com o framework Phaser, de um jogo de nave onde o jogador assume o controle de um piloto perdido no espaço."/>
       <link rel="canonical" href="https://devdiegomatos.com.br/trabalhos/jogo-da-nave"/>
       <meta name="author" content="Diego Matos"/>
@@ -36,9 +36,6 @@ export default function JogoDaNaveSEO() {
       <meta name="twitter:image" content={metaImagem}/>
       {/* <meta name="twitter:creator" content="@estevanmaito"/> */}
       {/* <meta name="twitter:site" content="@empresa"/> */}
-
-      {/* Phaser Framework */}
-      <script src="../js/jogos/jogo-da-nave/phaser.min.js"></script>
     </Helmet>
   )
 }

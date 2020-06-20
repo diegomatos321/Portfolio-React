@@ -31,26 +31,26 @@ export default class LoadScene extends Phaser.Scene{
         });
 
         // SPRITE SHEETS
-        this.load.spritesheet("Inimigo", "/uploads/assets/jogo-da-nave/imagens/inimigo.webp", {
+        this.load.spritesheet("Inimigo", "/assets/imagens/jogo-da-nave/inimigo.webp", {
             frameWidth: 92, frameHeight: 100
         })
-        this.load.spritesheet("Jogador", "/uploads/assets/jogo-da-nave/imagens/player.webp", {
+        this.load.spritesheet("Jogador", "/assets/imagens/jogo-da-nave/player.webp", {
             frameWidth: 39, frameHeight: 43
         })
-        this.load.spritesheet("ExplosaoSFX", "/uploads/assets/jogo-da-nave/imagens/explosion.webp", {
+        this.load.spritesheet("ExplosaoSFX", "/assets/imagens/jogo-da-nave/explosion.webp", {
             frameWidth: 16, frameHeight: 16
         })
 
         // IMAGENS webp
-        this.load.image("Fundo", "/uploads/assets/jogo-da-nave/imagens/background.webp")
-        this.load.image("Tiro", "/uploads/assets/jogo-da-nave/imagens/tiro.webp");
+        this.load.image("Fundo", "/assets/imagens/jogo-da-nave/background.webp")
+        this.load.image("Tiro", "/assets/imagens/jogo-da-nave/tiro.webp");
 
         // AUDIO FILES
 
-        this.load.audio("engineSFX", "/uploads/assets/jogo-da-nave/audio/engine_sound.mp3");
-        this.load.audio("explosionSFX", "/uploads/assets/jogo-da-nave/audio/explosion_sound.mp3");
-        this.load.audio("shootSFX", "/uploads/assets/jogo-da-nave/audio/shoot_sound.mp3");
-        this.load.audio("startUpSFX", "/uploads/assets/jogo-da-nave/audio/start-up_sound.mp3");
+        this.load.audio("engineSFX", "/assets/audio/jogo-da-nave/engine_sound.mp3");
+        this.load.audio("explosionSFX", "/assets/audio/jogo-da-nave/explosion_sound.mp3");
+        this.load.audio("shootSFX", "/assets/audio/jogo-da-nave/shoot_sound.mp3");
+        this.load.audio("startUpSFX", "/assets/audio/jogo-da-nave/start-up_sound.mp3");
     }
     
     create(){

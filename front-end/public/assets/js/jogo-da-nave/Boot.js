@@ -4,7 +4,7 @@ export default class BootScene extends Phaser.Scene{
     }
 
     preload(){
-        this.load.image("loadingBar", "/uploads/assets/jogo-da-nave/imagens/loadingBar.webp")
+        this.load.image("loadingBar", "/assets/imagens/jogo-da-nave/loadingBar.webp")
     }
 
     create(){

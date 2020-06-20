@@ -6,7 +6,7 @@ export default function SuperMarioSEO() {
   return (
     <Helmet>
       {/* SEO Geral */}
-      <title>Diego Matos | Super Mario</title>
+      <title>Super Mario | Desenvolvedor Diego Matos</title>
       <meta name="description" content="Avalie um dos trabalhos feitos por Diego Matos com seus alunos, a reprodução da primeira fase do Super Mario com o framework Phaser."/>
       <link rel="canonical" href="https://devdiegomatos.com.br/trabalhos/super-mario"/>
       <meta name="author" content="Diego Matos"/>
@@ -36,9 +36,6 @@ export default function SuperMarioSEO() {
       <meta name="twitter:image" content={metaImagem}/>
       {/* <meta name="twitter:creator" content="@estevanmaito"/> */}
       {/* <meta name="twitter:site" content="@empresa"/> */}
-
-      {/* Phaser Framework */}
-      <script src="../js/jogos/super-mario/phaser.min.js"></script>
     </Helmet>
   )
 }

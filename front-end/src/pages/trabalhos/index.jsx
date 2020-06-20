@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import MetaDados from "../../seo/trabalhos"
+import "../../css/trabalhos.css"
 
 import Trabalhos from "../../components/Trabalhos"
 import FlappyBird from "./FlappyBird"
@@ -9,11 +10,11 @@ import SuperMario from "./SuperMario"
 
 export default class Home extends Component {
   render() {
-    const {params} = this.props.match;
-
-    if (params === "flappybird") return <FlappyBird /> 
-    else if (params === "jogo-da-nave") return <JogoDaNave />
-    else if (params === "super-mario") return <SuperMario />
+    const {nomeDoTrabalho} = this.props.match.params;
+    
+    if (nomeDoTrabalho === "flappybird") return <FlappyBird /> 
+    else if (nomeDoTrabalho === "jogo-da-nave") return <JogoDaNave />
+    else if (nomeDoTrabalho === "super-mario") return <SuperMario />
     else return (
         <>
           <MetaDados/>

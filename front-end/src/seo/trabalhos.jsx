@@ -6,7 +6,7 @@ export default function TrabalhosSEO() {
   return (
     <Helmet>
       {/* SEO Geral */}
-      <title>Diego Matos | Trabalhos</title>
+      <title>Trabalhos | Desenvolvedor Diego Matos</title>
       <meta name="description" content="Página de visualização de todos os trabalhos do desenvolvedor Diego Matos."/>
       <link rel="canonical" href="https://devdiegomatos.com.br/trabalhos"/>
       <meta name="author" content="Diego Matos"/>

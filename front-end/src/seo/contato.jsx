@@ -6,7 +6,7 @@ export default function ContatoSEO() {
   return (
     <Helmet>
       {/* SEO Geral */}
-      <title>Diego Matos | Contato</title>
+      <title>Contato | Desenvolvedor Diego Matos</title>
       <meta name="description" content="Página para entrar em contato com o desenvolvedor Diego Matos."/>
       <link rel="canonical" href="https://devdiegomatos.com.br/contato"/>
       <meta name="author" content="Diego Matos"/>

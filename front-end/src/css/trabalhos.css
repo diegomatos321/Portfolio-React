@@ -1,37 +1,43 @@
-.main {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  margin: auto;
-  padding: 1em;
-  max-width: 1200px;
+.site {
+  justify-content: center;
+  align-content: center;
   grid-template-areas:
+    "header"
+    "mensagem"
     "title"
-    "aside"
-    "jogo";
+    "main-container"
+    "footer";
 }
 
 .title {
   grid-area: title;
 }
 
-.jogo{
-  grid-area: jogo;
+.container-trabalhos{
+  max-width: 1200px;
+  padding: 1em;
+  grid-area: main-container;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "aside"
+  "main";
 }
 
-.aside{
+.aside {
   grid-area: aside;
 }
 
-.warning{
+.warning {
   background-color: orange;
 }
 
-.mobile{
+.mobile {
   background-color: green;
 }
 
-.warning, .mobile{
+.warning,
+.mobile {
   padding: 1em;
   border-radius: 2em;
   margin-top: 1em;
@@ -39,16 +45,14 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .main {
+  .container-trabalhos {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
     /* justify-items: center; */
     /* align-items: center; */
     grid-template-areas:
-      "title title"
-      "aside jogo";
+      "aside main";
   }
-  
 }
 
 .items li {
@@ -62,23 +66,23 @@
   padding: 1em;
 }
 
-.jogo-container{
+.jogo-container {
   height: 100vh;
 }
 
-.flappybird{
+.flappybird {
   justify-self: center;
 }
 
-.aside div{
+.aside div {
   margin-bottom: 1em;
 }
 
-.game-screen{
+.game-screen {
   position: relative;
 }
 
-.game-screen canvas{
+.game-screen canvas {
   position: absolute;
 }
 

@@ -6,7 +6,7 @@ export default function FlappyBirdSEO() {
   return (
         <Helmet>
           {/* SEO Geral */}
-          <title>Diego Matos | FlappyBird</title>
+          <title>FlappyBird | Desenvolvedor Diego Matos</title>
           <meta name="description" content="Avalie um dos trabalhos feito por Diego Matos com os alunos, o desenvolvimento de um clone do FlappyBird com integração ao banco de dados MongoDB."/>
           <link rel="canonical" href="https://devdiegomatos.com.br/trabalhos/flappybird"/>
           <meta name="author" content="Diego Matos"/>
