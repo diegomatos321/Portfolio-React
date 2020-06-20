@@ -32,10 +32,10 @@ export default class Background {
         this.positions.forEach((position, index) => {
             let i = index % 2 // PAR OU IMPAR
 
-            if (i == 0) { // PAR = CHAO ; IMPAR = BACKGROUND
+            if (i === 0) { // PAR = CHAO ; IMPAR = BACKGROUND
                 //Contexto de z-index/depth= 02
                 ctx[2].drawImage(this.imagens[0], position.getX(), position.getY());
-            } else if (i == 1) {
+            } else if (i === 1) {
                 //Contexto de z-index/depth= 02
                 ctx[0].drawImage(this.imagens[1], position.getX(), position.getY());
             }
@@ -47,19 +47,19 @@ export default class Background {
         this.positions.forEach((position, index) => {
             let i = index % 2;
 
-            if (i == 0) { // PAR = CHAO
+            if (i === 0) { // PAR = CHAO
                 if (position.getX() + this.imagens[0].width < 0) {
-                    if (index == 0) {
+                    if (index === 0) {
                         position.setX(this.positions[2].getX() + this.imagens[0].width);
-                    } else if (index == 2) {
+                    } else if (index === 2) {
                         position.setX(this.positions[0].getX() + this.imagens[0].width);
                     }
                 }
-            } else if (i == 1) { // IMPAR = BACKGROUND
+            } else if (i === 1) { // IMPAR = BACKGROUND
                 if (position.getX() + this.imagens[1].width < 0) {
-                    if (index == 1) {
+                    if (index === 1) {
                         position.setX(this.positions[3].getX() + this.imagens[1].width);
-                    } else if (index == 3) {
+                    } else if (index === 3) {
                         position.setX(this.positions[1].getX() + this.imagens[1].width);
                     }
                 }

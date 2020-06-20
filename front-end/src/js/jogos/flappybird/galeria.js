@@ -26,7 +26,7 @@ let Galeria =
 
             divLoading.textContent = `CARREGADO: ${nome} (${arquivosCarregados}/${totalDeArquivos}) `;
 
-            if (arquivosCarregados == totalDeArquivos) callback();
+            if (arquivosCarregados === totalDeArquivos) callback();
         })
 
         // Atribui a source da imagem para o objeto

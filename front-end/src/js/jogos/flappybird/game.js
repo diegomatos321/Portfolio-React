@@ -49,7 +49,7 @@ export let jogador = {
 }
 
 let fundo = undefined;
-let entityList = new Array();
+let entityList = [];
 let spawnTime = 1700; //ms
 let tempoInicial, deltaTime = 0;
 
@@ -116,7 +116,7 @@ export let Game = {
         window.setInterval(addPipe, spawnTime);
 
         // Chamando o GameLoop
-        requestAnimFrame(Game.Engine.GameLoop);
+        window.requestAnimFrame(Game.Engine.GameLoop);
     },
 
     // Responsável pela lógica do jogo
@@ -125,7 +125,7 @@ export let Game = {
         GameLoop: function (tempoAtual) {
 
             // Responsável por chamar o GameLoop
-            requestAnimFrame(Game.Engine.GameLoop);
+            window.requestAnimFrame(Game.Engine.GameLoop);
 
             // Transforma o tempo para segundos (ex: 16.666ms para 0.01666s)
             tempoAtual = tempoAtual / 1000;
@@ -143,7 +143,7 @@ export let Game = {
         update: function () {
             // Para facilitar a lógica, decidir separar os objetos "player" e "background" dos canos (que pertencem a entityList)
             // porque seus comportamentos sao únicos, facilitando suas manipulações;
-            if (Game.STATE.CURRENT != Game.STATE.RUNNING) { return; }
+            if (Game.STATE.CURRENT !== Game.STATE.RUNNING) { return; }
 
             fundo.update(deltaTime); // Atualiza o fundo
 
@@ -155,7 +155,7 @@ export let Game = {
             }
 
             let recycle = entityList.filter((entity) => { // Filtra apenas os objetos inativos (OBS: Apenas os canos estão na entityList)
-                return entity.active == false;
+                return entity.active === false;
             })
 
             // Caso tenha items para serem recilados, chama o objeto Pool
@@ -165,7 +165,7 @@ export let Game = {
 
             // Retira da array os objetos desativados (OBS: Apenas os canos estão na entityList)
             entityList = entityList.filter((entity) => { // Filtra apenas os objetos ativos
-                return entity.active == true;
+                return entity.active === true;
             })
 
             // Atualiza os objetos e verifica colisao (OBS: Apenas os canos estão na entityList)
@@ -185,7 +185,7 @@ export let Game = {
                         jogador.body.position.getY() + jogador.body.height >= entity.position.getY()) {
                         gameOver();
                     }
-                    if (entity.name == "Pipe North" &&
+                    if (entity.name === "Pipe North" &&
                         distance + entityVelocity <= -maxDistance) {
                         addScore();
                     }
@@ -200,7 +200,7 @@ export let Game = {
         render: function () {
 
             ctx.forEach((element, index) => {
-                if (index == 4) { return; } // Posição 3 da array está relacionada ao HUD, cujo nao iremos ficar redesenhando/limpando a todo momento, apenas qnd necessario
+                if (index === 4) { return; } // Posição 3 da array está relacionada ao HUD, cujo nao iremos ficar redesenhando/limpando a todo momento, apenas qnd necessario
                 element.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT); // Limpa o canvas
             });
 
@@ -214,14 +214,14 @@ export let Game = {
             });
 
             // Desenha o HUD
-            if (Game.STATE.CURRENT == Game.STATE.RUNNING) {
+            if (Game.STATE.CURRENT === Game.STATE.RUNNING) {
                 ctx[4].clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
                 Game.Display.drawHUD(Game.STATE.RUNNING, deltaTime);
             }
         },
 
         drawHUD: function (hud, deltaTime) {
-            if (hud == Game.STATE.MENU) {
+            if (hud === Game.STATE.MENU) {
                 // MENU
                 ctx[4].drawImage(Galeria.imagens.startMenuScreen, GAME_WIDTH / 2 - (Galeria.imagens.startMenuScreen.width / 2), GAME_HEIGHT / 3 - (Galeria.imagens.startMenuScreen.height / 2))
                 ctx[4].font = "24px Source Code Pro";
@@ -231,7 +231,7 @@ export let Game = {
                 ctx[4].fillText("Por Diego Matos", GAME_WIDTH / 2, GAME_HEIGHT - 24);
             }
 
-            if (hud == Game.STATE.PAUSED) {
+            if (hud === Game.STATE.PAUSED) {
                 // PAUSADO
                 ctx[4].fillStyle = "rgba(0, 0, 0, 0.5)"
                 ctx[4].fillRect(0, 0, GAME_WIDTH, GAME_HEIGHT)
@@ -241,7 +241,7 @@ export let Game = {
                 ctx[4].fillText("PAUSADO", GAME_WIDTH / 2, GAME_HEIGHT / 2);
             }
 
-            if (hud == Game.STATE.GAME_OVER) {
+            if (hud === Game.STATE.GAME_OVER) {
                 // GAME OVER
                 ctx[4].drawImage(Galeria.imagens.gameOverScreen, GAME_WIDTH / 2 - (Galeria.imagens.gameOverScreen.width / 2), GAME_HEIGHT / 3 - (Galeria.imagens.gameOverScreen.height / 2))
 
@@ -277,7 +277,7 @@ export let Game = {
                 showRanking()
             }
 
-            if (hud == Game.STATE.RUNNING) {
+            if (hud === Game.STATE.RUNNING) {
 
                 // Desenha os pontos
                 ctx[4].font = "24px Arial";
@@ -338,7 +338,7 @@ export let Game = {
 }
 
 function addPipe() {
-    if (Game.STATE.CURRENT != Game.STATE.RUNNING) { return; } // Retornar se NAO estiver jogando/RUNNING
+    if (Game.STATE.CURRENT !== Game.STATE.RUNNING) { return; } // Retornar se NAO estiver jogando/RUNNING
 
     let newPosY = Math.round(Math.random() * -233); // Criar uma posição y randômica entre 0 (topo do cano) e -185 (subir o cano até 185px)
     let GAP = Galeria.imagens.pipeNorth_img.height + 100 // Distancia de um cano ao outro
@@ -351,7 +351,7 @@ function addPipe() {
 }
 
 function startGame() {
-    if (Game.STATE.CURRENT == Game.STATE.MENU || Game.STATE.CURRENT == Game.STATE.GAME_OVER) {
+    if (Game.STATE.CURRENT === Game.STATE.MENU || Game.STATE.CURRENT === Game.STATE.GAME_OVER) {
 
         ctx[4].clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT); // Limpa o HUD
 
@@ -360,7 +360,7 @@ function startGame() {
         jogador.score = 0;
 
         let recycle = entityList.filter((entity) => { // Filtra apenas os objetos inativos (OBS: Apenas os canos estão na entityList)
-            return entity.name == "Pipe North" || "Pipe South";
+            return entity.name === "Pipe North" || "Pipe South";
         })
         if (recycle.length > 0) {
             Pool.add(recycle)
@@ -372,10 +372,10 @@ function startGame() {
 }
 
 /*function tooglePaused() {
-    if (player.GAME_STATE == Game.STATE.PAUSED) {
+    if (player.GAME_STATE === Game.STATE.PAUSED) {
         startGame();
     }
-    else if (player.GAME_STATE == Game.STATE.RUNNING) {
+    else if (player.GAME_STATE === Game.STATE.RUNNING) {
         Game.STATE.CURRENT = Game.STATE.PAUSED;
     }
 }*/
@@ -387,13 +387,13 @@ function playSound(sound) {
 
 function inputBehavior(e) {
     e.preventDefault();
-    if (Game.STATE.CURRENT == Game.STATE.RUNNING) {
+    if (Game.STATE.CURRENT === Game.STATE.RUNNING) {
         jogador.body.moveUp();
         playSound("fly_sfx");
-    } else if (Game.STATE.CURRENT == Game.STATE.MENU) {
+    } else if (Game.STATE.CURRENT === Game.STATE.MENU) {
         startGame();
     }
-    else if (Game.STATE.CURRENT == Game.STATE.GAME_OVER) {
+    else if (Game.STATE.CURRENT === Game.STATE.GAME_OVER) {
         // Realiza um calculo para saber as dimensoes do botao START
         let buttonWidth = (Galeria.imagens.enter_btn.width * currentWidth) / GAME_WIDTH;
         let buttonHeight = (Galeria.imagens.enter_btn.height * currentHeight) / GAME_HEIGHT;

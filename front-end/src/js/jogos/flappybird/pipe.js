@@ -10,9 +10,9 @@ export default class Pipe extends Sprite {
     }
 
     draw(ctx) {
-        if (this.name == "Pipe North") {
+        if (this.name === "Pipe North") {
             ctx[3].drawImage(this.image, this.position.getX(), this.position.getY())
-        } else if (this.name == "Pipe South") { // Pipe south será desenhando atrás do chão
+        } else if (this.name === "Pipe South") { // Pipe south será desenhando atrás do chão
             ctx[1].drawImage(this.image, this.position.getX(), this.position.getY())
         }
     }

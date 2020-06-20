@@ -20,7 +20,7 @@ let Pool = {
 
     Pipe: Pipe,
 
-    stored: new Array(),
+    stored: [],
 
     // Tenta pegar um objeto armazenado
     get: function (className, name, parameters) {
@@ -29,7 +29,7 @@ let Pool = {
         // Percorre a array e verifica se o objeto requisitado já existe
         for (let i = 0; i < this.stored.length; i++) {
             const element = this.stored[i];
-            if (element.name == name) {
+            if (element.name === name) {
                 index = i;
                 // Se sim, termina o loop
                 break;
@@ -58,7 +58,7 @@ let Pool = {
     // Cria um novo objeto / classe
     create: function (className, parameters){
         let myObj;
-        if (className == "Audio") {
+        if (className === "Audio") {
             myObj = Galeria.audio[parameters.name].cloneNode(true); // Cria um clone do elemento Audio armazenado anteriormente
             myObj.name = parameters.name; // Atribui um nome à ele, para futura requisição da Pool
             myObj.resetAt = function (parameters) { // Atribui a função resetAt, para futura requisição da Pool

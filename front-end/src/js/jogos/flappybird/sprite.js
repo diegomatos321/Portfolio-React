@@ -73,7 +73,7 @@ export default class Sprite {
         let colunas = this.anims.config.columnNumber; // Pega o numero de colunas animação atual
         let stoped = false;
 
-        if (frames.indexOf(currentFrame) == -1) { // Caso o frame atual nao exista dentra da array de frames, eu defino ele como sendo
+        if (frames.indexOf(currentFrame) === -1) { // Caso o frame atual nao exista dentra da array de frames, eu defino ele como sendo
                                                   // o primeiro da array
             currentFrame = frames[0];
             this.anims.current.currentFrame = frames[0];
@@ -93,7 +93,7 @@ export default class Sprite {
             for (let coluna = 0; coluna < colunas; coluna++) {
                 // SE O FRAME EM QUE ESTOU PERCORRENDO É IGUAL AO MEU FRAME ATUAL
                 // Definir sua posição no sprite sheet
-                if (contador == currentFrame) {
+                if (contador === currentFrame) {
                     this.anims.current.originY = linha * this.anims.config.frameHeight;
                     this.anims.current.originX = coluna * this.anims.config.frameWidth;
 
