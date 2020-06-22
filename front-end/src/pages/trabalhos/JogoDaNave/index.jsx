@@ -1,47 +1,45 @@
 import React, { Component } from "react";
 import Helmet from "../../../seo/jogo-da-nave";
-import Aside from "./Aside"
+import LoadJS from "../../../utils/loadJS"
+import Aside from "./Aside";
 
 export default class index extends Component {
   componentDidMount() {
-    /* Phaser Framework */
-    let phaserScript = document.createElement("script");
-    phaserScript.setAttribute("id", "phaserJS");
-    phaserScript.setAttribute("defer", true);
-    phaserScript.setAttribute("src", "/assets/js/jogo-da-nave/phaser.min.js");
-    phaserScript.setAttribute("type", "module");
-
-    document.body.appendChild(phaserScript);
-
-    let script = document.createElement("script");
-    script.setAttribute("id", "jogoDaNaveJS");
-    script.setAttribute("defer", true);
-    script.setAttribute("src", "/assets/js/jogo-da-nave/index.js");
-    script.setAttribute("type", "module");
-
-    document.body.appendChild(script);
+    LoadJS({
+      src: "/assets/js/jogo-da-nave/phaser.min.js",
+      id: "phaser-framework",
+      callback: () => LoadJS({
+        src: "/assets/js/jogo-da-nave/index.js",
+        id: "jogo",
+        type: "module",
+      })
+    })
   }
 
-  componentWillUnmount = () => {
-    let jogoDaNaveJS = document.getElementById("jogoDaNaveJS");
-    jogoDaNaveJS.remove();
-  };
+  componentWillUnmount(){
+    let phaser = document.getElementById("phaser-framework");
+    let jogo = document.getElementById("jogo");
+
+    phaser.remove();
+    jogo.remove();
+  }
 
   render() {
     return (
       <>
         <Helmet />
-        <Aside/>
-        <main className="pagina-apresentacao">
-          <div className="title">
-            <h1 className="title">Jogo da Nave</h1>
-            <hr />
-          </div>
-
-          <div id="jogo" className="jogo">
-            <div id="jogo-container" className="jogo-container"></div>
-          </div>
-        </main>
+        <div className="title">
+          <h1 className="title">Jogo da Nave</h1>
+          <hr />
+        </div>
+        <div className="container-trabalhos">
+          <Aside />
+          <main className="pagina-apresentacao">
+            <div id="jogo" className="jogo">
+              <div id="jogo-container" className="jogo-container"></div>
+            </div>
+          </main>
+        </div>
       </>
     );
   }

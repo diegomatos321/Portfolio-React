@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import Aside from "./Aside";
 import Helmet from "../../../seo/flappybird";
+import LoadJS from "../../../utils/loadJS";
 
 export default class FlappyBird extends Component {
-  componentDidMount = () => {
-    let script = document.createElement("script");
-    script.setAttribute("id", "flappybirdJS");
-    script.setAttribute("defer", true);
-    script.setAttribute("src", "/assets/js/flappybird/index.js");
-    script.setAttribute("type", "module");
 
-    document.body.appendChild(script);
+  componentDidMount = () => {
+    LoadJS({
+      id: "flappybirdJS",
+      src: "/assets/js/flappybird/index.js",
+      defer: true,
+      type: "module"
+    })
   };
 
   componentWillUnmount = () => {
@@ -28,13 +29,10 @@ export default class FlappyBird extends Component {
         </div>
         <div className="container-trabalhos">
           <Aside />
-          <main className="main">
+          <main className="pagina-apresentacao">
             <div id="jogo" className="jogo">
               <div id="jogo-container" className="jogo-container flappybird">
-                <div
-                  id="formulario-container"
-                  className="formulario-container hidden"
-                >
+                <div id="formulario-container" className="formulario-container">
                   <form
                     id="game-formulario"
                     className="formulario"
@@ -59,7 +57,7 @@ export default class FlappyBird extends Component {
                   </form>
                 </div>
 
-                <div id="game-screen" className="game-screen hidden">
+                <div id="game-screen" className="game-screen">
                   <canvas id="hud-layer"></canvas>
                   <canvas id="game-layer"></canvas>
                   <canvas id="ground-layer"></canvas>

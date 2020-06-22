@@ -11,7 +11,7 @@ import Footer from "./components/Footer"
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter forceRefresh={true}>
         <Header/>
         <Switch>
           <Route exact path="/" component={Home}/>

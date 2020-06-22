@@ -7,19 +7,19 @@ export default function Footer() {
         <h3 className="widget-title">Redes Sociais</h3>
         <div className="widget-content">
           <div className="widget-item">
-            <a href="# ">
+            <a href="# "rel="noopener noreferrer">
               <i className="fab fa-facebook-square"></i>
               <p className="font-size-small">Facebook</p>
             </a>
           </div>
           <div className="widget-item">
-            <a href="# ">
+            <a href="# "rel="noopener noreferrer">
               <i className="fab fa-instagram-square"></i>
               <p className="font-size-small">Instagram</p>
             </a>
           </div>
           <div className="widget-item">
-            <a href="https://github.com/diegomatos321 ">
+            <a href="https://github.com/diegomatos321 " rel="noopener noreferrer">
               <i className="fab fa-github-square"></i>
               <p className="font-size-small">GitHub</p>
             </a>

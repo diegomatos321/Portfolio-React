@@ -9,6 +9,9 @@ import JogoDaNave from "./JogoDaNave"
 import SuperMario from "./SuperMario"
 
 export default class Home extends Component {
+  componentDidMount(){
+    document.getElementById("header").scrollIntoView()
+  }
   render() {
     const {nomeDoTrabalho} = this.props.match.params;
     

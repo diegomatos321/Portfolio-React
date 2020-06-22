@@ -4,7 +4,7 @@ import Logo from "../uploads/imagens/logo.webp"
 
 export default function Header() {
   return (
-    <header className="header">
+    <header id="header" className="header">
       <figure className="img logo">
         <Link to="/">
           <img src={Logo} alt="Logo do site" title="Logo do Site"/>

@@ -36,68 +36,68 @@ export default class LoadScene extends Phaser.Scene {
 
         // SPRITE SHEETS
 
-        this.load.spritesheet("Mario Pequeno", "/uploads/assets/super-mario/imagens/Mario-Pequeno.webp", {
+        this.load.spritesheet("Mario Pequeno", "/assets/imagens/super-mario/Mario-Pequeno.webp", {
             frameWidth: 16, frameHeight: 16
         })
 
-        this.load.spritesheet("Mario Grande", "/uploads/assets/super-mario/imagens/Mario-Grande.webp", {
+        this.load.spritesheet("Mario Grande", "/assets/imagens/super-mario/Mario-Grande.webp", {
             frameWidth: 16, frameHeight: 32
         })
 
-        this.load.spritesheet("Luigi Pequeno", "/uploads/assets/super-mario/imagens/Luigi-Pequeno.webp", {
+        this.load.spritesheet("Luigi Pequeno", "/assets/imagens/super-mario/Luigi-Pequeno.webp", {
             frameWidth: 16, frameHeight: 16
         })
 
-        this.load.spritesheet("Luigi Grande", "/uploads/assets/super-mario/imagens/Luigi-Grande.webp", {
+        this.load.spritesheet("Luigi Grande", "/assets/imagens/super-mario/Luigi-Grande.webp", {
             frameWidth: 16, frameHeight: 32
         })
 
-        this.load.spritesheet("LittleGomba", "/uploads/assets/super-mario/imagens/Little-Gomba.webp", {
+        this.load.spritesheet("LittleGomba", "/assets/imagens/super-mario/Little-Gomba.webp", {
             frameWidth: 16, frameHeight: 16
         })
 
-        this.load.spritesheet("surpriseBlock", "/uploads/assets/super-mario/imagens/surpriseBlock.webp", {
+        this.load.spritesheet("surpriseBlock", "/assets/imagens/super-mario/surpriseBlock.webp", {
             frameWidth: 16, frameHeight: 16
         })
 
-        this.load.spritesheet("coin", "/uploads/assets/super-mario/imagens/coin.webp", {
+        this.load.spritesheet("coin", "/assets/imagens/super-mario/coin.webp", {
             frameWidth: 16, frameHeight: 16
         })
 
-        this.load.spritesheet("KoopaTroopa", "/uploads/assets/super-mario/imagens/Koopa-Troopa.webp", {
+        this.load.spritesheet("KoopaTroopa", "/assets/imagens/super-mario/Koopa-Troopa.webp", {
             frameWidth: 16, frameHeight: 24
         })
 
         // IMAGENS PNG
-        this.load.image("brick", "/uploads/assets/super-mario/imagens/brick.webp");
-        this.load.image("magicMushroom", "/uploads/assets/super-mario/imagens/MagicMushroom.webp");
-        this.load.image("mushroom", "/uploads/assets/super-mario/imagens/Mushroom.webp");
-        this.load.image("starMan", "/uploads/assets/super-mario/imagens/Starman.webp");
-        this.load.image("menuBanner", "/uploads/assets/super-mario/imagens/menu-banner.webp");
-        this.load.image("menuPonteiro", "/uploads/assets/super-mario/imagens/menu-ponteiro.webp");
-        this.load.image("brickParticle", "/uploads/assets/super-mario/imagens/brick-particle.webp");
+        this.load.image("brick", "/assets/imagens/super-mario/brick.webp");
+        this.load.image("magicMushroom", "/assets/imagens/super-mario/MagicMushroom.webp");
+        this.load.image("mushroom", "/assets/imagens/super-mario/Mushroom.webp");
+        this.load.image("starMan", "/assets/imagens/super-mario/Starman.webp");
+        this.load.image("menuBanner", "/assets/imagens/super-mario/menu-banner.webp");
+        this.load.image("menuPonteiro", "/assets/imagens/super-mario/menu-ponteiro.webp");
+        this.load.image("brickParticle", "/assets/imagens/super-mario/brick-particle.webp");
 
         // TILEMAP
 
-        this.load.tilemapTiledJSON("world-1-1", "/uploads/assets/super-mario/tilemap/world1-1.json");
-        this.load.tilemapTiledJSON("menu", "/uploads/assets/super-mario/tilemap/menu.json");
+        this.load.tilemapTiledJSON("world-1-1", "/assets/tilemap/super-mario/world1-1.json");
+        this.load.tilemapTiledJSON("menu", "/assets/tilemap/super-mario/menu.json");
 
         // TILESET  
 
-        this.load.image("tileset", "/uploads/assets/super-mario/tilemap/tileset.webp")
+        this.load.image("tileset", "/assets/tilemap/super-mario/tileset.webp")
 
         // AUDIO FILES
 
-        this.load.audio("jumpSmallSFX", "/uploads/assets/super-mario/audio/smb_jump-small.mp3");
-        this.load.audio("jumpSuperSFX", "/uploads/assets/super-mario/audio/smb_jump-super.mp3");
-        this.load.audio("powerupAppearsSFX", "/uploads/assets/super-mario/audio/smb_powerup_appears.mp3");
-        this.load.audio("powerUpSFX", "/uploads/assets/super-mario/audio/smb_powerup.mp3");
-        this.load.audio("coinSFX", "/uploads/assets/super-mario/audio/smb_coin.mp3");
-        this.load.audio("bumpSFX", "/uploads/assets/super-mario/audio/smb_bump.mp3");
-        this.load.audio("backgroundMusic", "/uploads/assets/super-mario/audio/BackgroundMusic.mp3")
-        this.load.audio("gameOverSFX", "/uploads/assets/super-mario/audio/smb_gameover.mp3");
-        this.load.audio("breakBlockSFX", "/uploads/assets/super-mario/audio/smb_breakblock.mp3");
-        this.load.audio("world_clear", "/uploads/assets/super-mario/audio/smb_world_clear.mp3");
+        this.load.audio("jumpSmallSFX", "/assets/audio/super-mario/smb_jump-small.mp3");
+        this.load.audio("jumpSuperSFX", "/assets/audio/super-mario/smb_jump-super.mp3");
+        this.load.audio("powerupAppearsSFX", "/assets/audio/super-mario/smb_powerup_appears.mp3");
+        this.load.audio("powerUpSFX", "/assets/audio/super-mario/smb_powerup.mp3");
+        this.load.audio("coinSFX", "/assets/audio/super-mario/smb_coin.mp3");
+        this.load.audio("bumpSFX", "/assets/audio/super-mario/smb_bump.mp3");
+        this.load.audio("backgroundMusic", "/assets/audio/super-mario/BackgroundMusic.mp3")
+        this.load.audio("gameOverSFX", "/assets/audio/super-mario/smb_gameover.mp3");
+        this.load.audio("breakBlockSFX", "/assets/audio/super-mario/smb_breakblock.mp3");
+        this.load.audio("world_clear", "/assets/audio/super-mario/smb_world_clear.mp3");
     }
 
     create() {

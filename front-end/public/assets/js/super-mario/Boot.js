@@ -4,7 +4,7 @@ export default class BootScene extends Phaser.Scene{
     }
 
     preload(){
-        this.load.image("loadingBar", "/uploads/assets/super-mario/imagens/loadingBar.webp")
+        this.load.image("loadingBar", "/assets/imagens/super-mario/loadingBar.webp")
     }
 
     create(){

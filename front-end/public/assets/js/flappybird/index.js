@@ -4,10 +4,12 @@ import Galeria from "./galeria.js"
 let hasSubmited = false;
 
 const formularioContainer = document.getElementById("formulario-container");
+formularioContainer.classList.toggle("hidden");
 const formulario = document.getElementById("game-formulario");
 
 const fatherContainer = document.getElementById("jogo-container");
 const gameScreen = document.getElementById("game-screen");
+gameScreen.classList.toggle("hidden");
 
 const site = document.getElementById("site");
 
@@ -18,6 +20,7 @@ formulario.onsubmit = async function (e) {
 
     // if (hasSubmited || !body.validate) return
     if (hasSubmited) return
+    hasSubmited=true;
 
     try {
         let response = await fetch("./flappybird", {
@@ -29,6 +32,7 @@ formulario.onsubmit = async function (e) {
         let data = await response.json();
 
         if (response.status === 400) {
+            hasSubmited=false;
             apresentarMensagensDeError(data);
         } else {
             iniciarOJogo(data);
@@ -112,7 +116,6 @@ function apresentarMensagensDeError(data) {
 }
 
 function iniciarOJogo(data) {
-    hasSubmited = true;
     fatherContainer.scrollIntoView(true);
 
     mainGame.jogador.score = data.score;
