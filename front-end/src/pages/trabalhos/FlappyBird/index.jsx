@@ -4,7 +4,6 @@ import Helmet from "../../../seo/flappybird";
 import LoadJS from "../../../utils/loadJS";
 
 export default class FlappyBird extends Component {
-
   componentDidMount = () => {
     LoadJS({
       id: "flappybirdJS",

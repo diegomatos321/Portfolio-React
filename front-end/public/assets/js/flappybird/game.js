@@ -422,24 +422,24 @@ function addScore() {
 
 async function gameOver() {
     Game.STATE.CURRENT = Game.STATE.GAME_OVER;
-    const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+    // const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
 
     if (jogador.score > jogador.highScore) {
         jogador.highScore = jogador.score;
 
         try {
-            let response = await fetch("./flappybird/editar", {
-                credentials: 'same-origin', // <-- includes cookies in the request
+            const baseURL = window.location.pathname
+            let response = await fetch(`${baseURL}/editar`, {
+                //credentials: 'same-origin', // <-- includes cookies in the request
                 headers: { 
                     'Content-Type': 'application/json',
-                    'CSRF-Token': token // <-- is the csrf token as a header
+                    //'CSRF-Token': token // <-- is the csrf token as a header
                 },
                 method: 'PATCH',
                 body: JSON.stringify(jogador)
             })
 
             let data = await response.json();
-            console.log(data)
             Game.Display.drawHUD(Game.STATE.GAME_OVER, 0)
         } catch (error) {
             console.log(error)
@@ -453,7 +453,9 @@ async function gameOver() {
 
 async function showRanking() {
     try {
-        let response = await fetch("./flappybird/jogadores/10");
+        const baseURL = window.location.pathname
+        let response = await fetch(`${baseURL}/jogadores/10`);
+
         let data = await response.json();
 
         ctx[4].font = "16px Arial";

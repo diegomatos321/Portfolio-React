@@ -23,7 +23,8 @@ formulario.onsubmit = async function (e) {
     hasSubmited=true;
 
     try {
-        let response = await fetch("./flappybird", {
+        const baseURL = window.location.pathname;
+        let response = await fetch(baseURL, {
             headers: { 'Content-Type': 'application/json' },
             method: 'POST',
             body: JSON.stringify(body)

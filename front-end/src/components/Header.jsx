@@ -1,13 +1,13 @@
 import React from "react";
-import {Link} from "react-router-dom"
-import Logo from "../uploads/imagens/logo.webp"
+import { Link } from "react-router-dom";
+import Logo from "../uploads/imagens/logo.webp";
 
-export default function Header() {
+export default function Header(props) {
   return (
     <header id="header" className="header">
       <figure className="img logo">
         <Link to="/">
-          <img src={Logo} alt="Logo do site" title="Logo do Site"/>
+          <img src={Logo} alt="Logo do site" title="Logo do Site" />
         </Link>
       </figure>
       <nav className="main-nav">
@@ -26,13 +26,40 @@ export default function Header() {
             </li>
             <ul className="drop-down">
               <li className="sub-nav-item">
-                <Link to="/trabalhos/flappybird">FlappyBird</Link>
+                <Link
+                  to={{
+                    pathname: "/trabalhos/flappybird",
+                    state: {
+                      refresh: true,
+                    },
+                  }}
+                >
+                  FlappyBird
+                </Link>
               </li>
               <li className="sub-nav-item">
-                <Link to="/trabalhos/jogo-da-nave">Jogo da Nave</Link>
+                <Link
+                  to={{
+                    pathname: "/trabalhos/jogo-da-nave",
+                    state: {
+                      refresh: true,
+                    },
+                  }}
+                >
+                  Jogo da Nave
+                </Link>
               </li>
               <li className="sub-nav-item">
-                <Link to="/trabalhos/super-mario">Super Mario</Link>
+                <Link
+                  to={{
+                    pathname: "/trabalhos/super-mario",
+                    state: {
+                      refresh: true,
+                    },
+                  }}
+                >
+                  Super Mario
+                </Link>
               </li>
             </ul>
           </ul>
