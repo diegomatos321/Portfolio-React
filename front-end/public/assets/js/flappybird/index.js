@@ -4,12 +4,10 @@ import Galeria from "./galeria.js"
 let hasSubmited = false;
 
 const formularioContainer = document.getElementById("formulario-container");
-formularioContainer.classList.toggle("hidden");
 const formulario = document.getElementById("game-formulario");
 
 const fatherContainer = document.getElementById("jogo-container");
 const gameScreen = document.getElementById("game-screen");
-gameScreen.classList.toggle("hidden");
 
 const site = document.getElementById("site");
 

@@ -10,12 +10,9 @@ import JogoDaNave from "./JogoDaNave"
 import SuperMario from "./SuperMario"
 
 export default class Home extends Component {
-  constructor(props){
-    super(props)
-  }
-
   componentDidMount(){
-    document.getElementById("header").scrollIntoView()
+    const element = document.getElementById("container-trabalho") || document.getElementsByTagName("main")[0];
+    element.scrollIntoView();
   }
 
   componentWillUnmount(){
@@ -26,7 +23,7 @@ export default class Home extends Component {
     const {nomeDoTrabalho} = this.props.match.params;
     const {state} = this.props.location
     if(state && state.refresh){
-      window.location.reload()
+      window.location.reload(); // Necessário para limpar a memoria do navegador e o jogo não bugar
       return <Redirect 
       to={{
         pathname: `/trabalhos/${nomeDoTrabalho}`,

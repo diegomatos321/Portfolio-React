@@ -15,6 +15,10 @@ export default class Contato extends Component {
     };
   }
 
+  componentDidUpdate(){
+    document.getElementById("header").scrollIntoView()
+  }
+
   submitHandler = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);

@@ -9,8 +9,8 @@ export default class FlappyBird extends Component {
       id: "flappybirdJS",
       src: "/assets/js/flappybird/index.js",
       defer: true,
-      type: "module"
-    })
+      type: "module",
+    });
   };
 
   componentWillUnmount = () => {
@@ -22,16 +22,19 @@ export default class FlappyBird extends Component {
     return (
       <>
         <Helmet />
-        <div className="title">
-          <h1>FlappyBird</h1>
-          <hr />
-        </div>
-        <div className="container-trabalhos">
+        <div id="container-trabalho" className="container-trabalho">
+          <div className="title">
+            <h1>FlappyBird</h1>
+            <hr />
+          </div>
           <Aside />
           <main className="pagina-apresentacao">
             <div id="jogo" className="jogo">
               <div id="jogo-container" className="jogo-container flappybird">
-                <div id="formulario-container" className="formulario-container">
+                <div
+                  id="formulario-container"
+                  className="formulario-container hidden"
+                >
                   <form
                     id="game-formulario"
                     className="formulario"
@@ -56,7 +59,7 @@ export default class FlappyBird extends Component {
                   </form>
                 </div>
 
-                <div id="game-screen" className="game-screen">
+                <div id="game-screen" className="game-screen hidden">
                   <canvas id="hud-layer"></canvas>
                   <canvas id="game-layer"></canvas>
                   <canvas id="ground-layer"></canvas>
@@ -66,6 +69,12 @@ export default class FlappyBird extends Component {
                 <div id="loading-txt" className="loading-txt"></div>
               </div>
             </div>
+            <div className="jogo-github">
+                <h3>Veja o código desse jogo</h3>
+                <a href="#" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              </div>
           </main>
         </div>
       </>

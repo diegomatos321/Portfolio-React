@@ -296,9 +296,10 @@ export let Game = {
 
         // Chamado quando a tela mudar de tamanho / para redimensionar a tela
         resize: function () {
-            const clientWidth = window.screen.width;
-            const clientHeight = window.screen.height;
             const parentDiv = document.getElementById("jogo-container");
+            const clientWidth = parentDiv.clientWidth;
+            const clientHeight = parentDiv.clientHeight;
+            console.log(clientWidth, clientHeight)
 
             if (android || ios) {
                 // Certifica de manter as dimensoes retangulares, tanto com o celular na horizontal quanto na vertical
@@ -308,23 +309,15 @@ export let Game = {
                     ratio = clientHeight / clientWidth;
                 }
             } else {
-                ratio = GAME_WIDTH / GAME_HEIGHT
+                ratio = GAME_WIDTH / GAME_HEIGHT;
             }
 
-            if(clientWidth <= 768){
-                currentHeight = 0.85*clientHeight;
-            }
-            else{
-                currentHeight = 0.8*clientHeight;
-            }
-
+            currentHeight = clientHeight;
             currentWidth = currentHeight * ratio;
             GameScreen.style.width = currentWidth + "px";
             GameScreen.style.height = currentHeight + "px";
 
-            parentDiv.style.border = "2px solid black";
-            parentDiv.style.width = currentWidth + "px";
-            parentDiv.style.height = currentHeight + "px";
+            GameScreen.style.border = "1px solid black";
 
             // Graficamente, por meio do css, redimensionamos o canvas.
 
@@ -431,7 +424,7 @@ async function gameOver() {
             const baseURL = window.location.pathname
             let response = await fetch(`${baseURL}/editar`, {
                 //credentials: 'same-origin', // <-- includes cookies in the request
-                headers: { 
+                headers: {
                     'Content-Type': 'application/json',
                     //'CSRF-Token': token // <-- is the csrf token as a header
                 },

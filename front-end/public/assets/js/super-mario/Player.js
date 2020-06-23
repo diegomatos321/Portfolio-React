@@ -100,7 +100,6 @@ export default class Jogador extends Phaser.Physics.Arcade.Sprite {
     }
 
     animacaoDoJogador() {
-        console.log(`${this.current} ${this.tamanho} ${this.stance}`)
         this.anims.play(`${this.current} ${this.tamanho} ${this.stance}`, true);
         this.body.setSize();
     }

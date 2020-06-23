@@ -8,6 +8,9 @@ import Trabalhos from "./partials/TrabalhosHome"
 import Contato from "./partials/Contato"
 
 export default class Home extends Component {
+  componentDidMount(){
+    document.getElementById("header").scrollIntoView()
+  }
   render() {
     return (
       <>

@@ -10,16 +10,16 @@ export default function aside() {
         <ol className="items">
           <li>
             Quando você cadastrar seu <i>nickname</i>, basta{" "}
-            <strong>clicar na tela</strong> para começar o jogo !
+            <strong>clicar na tela</strong> para começar o jogo!
           </li>
           <li>
             <strong>Clique na tela</strong> para seu pássaro{" "}
-            <strong>voar</strong> !
+            <strong>voar</strong>!
           </li>
           <li>
-            <strong>Evite</strong> os Canos e não caia no chao !
+            <strong>Evite</strong> os Canos e não caia no chao!
           </li>
-          <li>Bom Jogo !</li>
+          <li>Bom Jogo!</li>
         </ol>
       </div>
       <div className="finalidade">
@@ -39,13 +39,13 @@ export default function aside() {
             Noções Básicas de <strong>SEO</strong>.
           </li>
           <li>
-            Do básico ao avançado com: classNamees, Objetos, Loops, Arrays,
+            Do básico ao avançado com: classNames, Objetos, Loops, Arrays,
             Strings...
           </li>
           <li>Melhores formatos de imagems e audios para a web.</li>
           <li>
             Como realizar o loading prévio das imagems por meio das
-            funcionalidades do JavaScript
+            funcionalidades do JavaScript.
           </li>
           <li>
             Uso do princípio{" "}

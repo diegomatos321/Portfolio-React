@@ -1,27 +1,28 @@
 .site {
-  justify-content: center;
-  align-content: center;
+  /* justify-content: center;
+  align-content: center; */
   grid-template-areas:
     "header"
     "mensagem"
-    "title"
     "main-container"
     "footer";
 }
 
-.title {
-  grid-area: title;
-}
-
-.container-trabalhos{
+.container-trabalho{
   max-width: 1200px;
   padding: 1em;
   grid-area: main-container;
   display:grid;
+  margin:auto;
   grid-template-columns: 1fr;
   grid-template-areas: 
+  "title"
   "aside"
   "main";
+}
+
+.title {
+  grid-area: title;
 }
 
 .aside {
@@ -45,13 +46,17 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .container-trabalhos {
+  .container-trabalho {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
-    /* justify-items: center; */
-    /* align-items: center; */
+    /* height: 100vh; */
     grid-template-areas:
+      "title title"
       "aside main";
+  }
+  .aside{
+    height: 90vh;
+    overflow: scroll;
   }
 }
 
@@ -60,22 +65,26 @@
   margin-left: 0.3em;
 }
 
-.jogo {
-  display: grid;
-  align-content: center;
-  padding: 1em;
+.pagina-apresentacao {
+  height: 90vh;
 }
 
-.jogo-container {
-  height: 100vh;
+.jogo{
+  height: 90%;
+}
+.jogo-container{
+  height: 100%;
+  display: grid;
+  justify-content: center;
 }
 
 .flappybird {
   justify-self: center;
 }
 
-.aside div {
-  margin-bottom: 1em;
+.formulario-container{
+  max-width: 300px;
+  margin:auto;
 }
 
 .game-screen {
