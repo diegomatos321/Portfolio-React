@@ -69,12 +69,18 @@ export default class FlappyBird extends Component {
                 <div id="loading-txt" className="loading-txt"></div>
               </div>
             </div>
-            <div className="jogo-github">
-                <h3>Veja o código desse jogo</h3>
-                <a href="#" rel="noopener noreferrer">
-                  GitHub
+            <div className="flex-container btn-container">
+              <h3>Veja o código desse jogo</h3>
+              <div className="btn widget-item">
+                <a
+                  href="https://github.com/diegomatos321 "
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-github-square"></i>
+                  <p className="font-size-small">GitHub</p>
                 </a>
               </div>
+            </div>
           </main>
         </div>
       </>

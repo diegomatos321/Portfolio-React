@@ -29,7 +29,11 @@ export default function Aside() {
         <p>
           Esse jogo teve como objetivo trabalhar com recursos mais avançados da
           ferramenta{" "}
-          <a href="https://phaser.io/" rel="noopener noreferrer" target="_blank">
+          <a
+            href="https://phaser.io/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             Phaser
           </a>
           :

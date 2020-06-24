@@ -6,7 +6,7 @@ import Aside from "./Aside";
 export default class index extends Component {
   componentDidMount() {
     LoadJS({
-      src: "/assets/js/jogo-da-nave/phaser.min.js",
+      src: "/assets/js/phaser.min.js",
       id: "phaser-framework",
       callback: () =>
         LoadJS({
@@ -39,12 +39,19 @@ export default class index extends Component {
             <div id="jogo" className="jogo">
               <div id="jogo-container" className="jogo-container"></div>
             </div>
-            <div className="jogo-github">
-                <h3>Veja o código desse jogo</h3>
-                <a href="#" rel="noopener noreferrer">
-                  GitHub
+            <div className="flex-container btn-container">
+              <h3>Veja o código desse jogo</h3>
+              <div className="btn widget-item">
+                <a
+                  href="https://github.com/diegomatos321/Jogo-Super-Mario-Bros-Phaser"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i className="fab fa-github-square"></i>
+                  <p className="font-size-small">GitHub</p>
                 </a>
               </div>
+            </div>
           </main>
         </div>
       </>
