@@ -2,8 +2,9 @@
   "name": "portfolio-react",
   "version": "1.0.0",
   "description": "Portfolio desenvolido com React, Express e MongoDB",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start" : "node app.js",
     "devStart": "nodemon app.js"
   },
   "author": "Diego Matos",

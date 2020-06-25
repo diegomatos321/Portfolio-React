@@ -10,7 +10,7 @@ export default function SuperMarioSEO() {
       <meta name="description" content="Avalie um dos trabalhos feitos por Diego Matos com seus alunos, a reprodução da primeira fase do Super Mario com o framework Phaser."/>
       <link rel="canonical" href="https://devdiegomatos.com.br/trabalhos/super-mario"/>
       <meta name="author" content="Diego Matos"/>
-      <meta name="robots" content="index"/>
+      <meta name="robots" content="index,follow"/>
 
       {/* Google+ / Schema.org */}
       <meta itemprop="name" content="Diego Matos | Super Mario"/>

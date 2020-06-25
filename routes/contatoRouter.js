@@ -2,26 +2,6 @@ const contatoRouter = require("express").Router();
 const nodemailer = require("nodemailer");
 const Contato = require("../models/contato.js");
 const { body, validationResult } = require('express-validator');
-// const csurf = require('csurf');
-
-//CSURF Protection
-// const csrfMiddleware = csurf({
-//   cookie: true
-// });
-
-// contatoRouter.use(csrfMiddleware);
-
-/*
-contatoRouter.get("/", async (req, res) => {
-  res.render("./contato/index", {
-    layout: "./layouts/pages",
-    data: {
-      page: "contato",
-      csfrToken: req.csrfToken()
-    }
-  });
-});
-*/
 
 contatoRouter.post("/", [
   body('nome').isLength({ min: 5, max: 50 }).withMessage("Campo nome deve ter entre 5 à 50 caracteres").not().isEmpty().trim().escape(),

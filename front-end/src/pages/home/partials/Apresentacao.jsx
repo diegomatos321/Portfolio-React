@@ -79,7 +79,7 @@ export default class Apresentacao extends Component {
             </a>
             <a
               className="flex-item btn"
-              href="https://github.com/diegomatos321/Portfolio-Node"
+              href="https://github.com/diegomatos321/Portfolio-React"
               rel="noopener noreferrer"
               target="_blank"
             >

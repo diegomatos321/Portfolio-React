@@ -39,9 +39,13 @@ export default function aside() {
             Noções Básicas de <strong>SEO</strong>.
           </li>
           <li>
-            Do básico ao avançado com: classNames, Objetos, Loops, Arrays,
+            Do básico ao avançado com: classes, Objetos, Loops, Arrays,
             Strings...
           </li>
+          <li>
+            Programação orientada à objetos
+          </li>
+
           <li>Melhores formatos de imagems e audios para a web.</li>
           <li>
             Como realizar o loading prévio das imagems por meio das
@@ -76,6 +80,9 @@ export default function aside() {
           <li>
             <strong>Noções de desenvolvimento</strong>, permitindo o aluno ser
             mais indepedente.
+          </li>
+          <li>
+            Requições para uma API
           </li>
           <li>Validação de dados.</li>
           <li>

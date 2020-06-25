@@ -36,7 +36,7 @@ export default function Footer() {
             </a>
           </div>
           <div className="widget-item">
-            <a href="tel:+5521995121978 ">
+            <a href="tel:+5521995121978">
               <i className="fas fa-phone-square-alt"></i>
               <p className="font-size-small">Telefone: (21) 9 9512-1978</p>
             </a>

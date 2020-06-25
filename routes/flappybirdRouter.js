@@ -1,14 +1,6 @@
 const flappybirdRouter = require("express").Router();
 const Jogador = require("../models/jogador.js");
 const { body, validationResult } = require('express-validator');
-// const csurf = require('csurf');
-
-//CSURF Protection
-// const csrfMiddleware = csurf({
-//     cookie: true
-// });
-
-// flappybirdRouter.use(csrfMiddleware);
 
 // GET ALL PLAYERS
 flappybirdRouter.get("/jogadores/:quantidade", async (req, res) => {

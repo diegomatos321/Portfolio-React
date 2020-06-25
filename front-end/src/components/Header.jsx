@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../uploads/imagens/logo.webp";
 
-export default function Header(props) {
+export default function Header() {
   return (
     <header id="header" className="header">
       <figure className="img logo">

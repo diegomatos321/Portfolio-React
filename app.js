@@ -15,6 +15,7 @@ const app = express();
 app.use(helmet());
 
 /*
+Redirecionamento HTTPS da Umbler
 app.use((req, res, next) => { //Cria um middleware onde todas as requests passam por ele 
     if (req.headers["x-forwarded-proto"] == "http") //Checa se o protocolo informado nos headers é HTTP 
         res.redirect(`https://${req.headers.host}${req.url}`); //Redireciona pra HTTPS 
@@ -30,7 +31,7 @@ app.use(express.json());
 // DATA BASE
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
 
-mongoose.connection.on('error', error => console.log("Ocorreu um erro ao conectar na base de dados: "));
+mongoose.connection.on('error', error => console.log("Ocorreu um erro ao conectar na base de dados: ", error));
 mongoose.connection.once('open', () => console.log("Conectado na base de dados"));
 
 // ROUTES

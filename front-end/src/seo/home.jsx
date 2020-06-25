@@ -10,7 +10,7 @@ export default function HomeSEO() {
       <meta name="description" content="Página principal do desenvolvedor Diego Matos, conheça um pouco sobre ele, entre em contato, baixe seu curriculum ou olhe o código desse site em sua página do GitHub."/>
       <link rel="canonical" href="https://devdiegomatos.com.br/"/>
       <meta name="author" content="Diego Matos"/>
-      <meta name="robots" content="index"/>
+      <meta name="robots" content="index,follow"/>
 
       {/* Google+ / Schema.org */}
       <meta itemprop="name" content="Diego Matos | Desenvolvedor Web"/>

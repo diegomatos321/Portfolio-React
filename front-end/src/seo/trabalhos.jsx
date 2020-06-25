@@ -10,7 +10,7 @@ export default function TrabalhosSEO() {
       <meta name="description" content="Página de visualização de todos os trabalhos do desenvolvedor Diego Matos."/>
       <link rel="canonical" href="https://devdiegomatos.com.br/trabalhos"/>
       <meta name="author" content="Diego Matos"/>
-      <meta name="robots" content="index"/>
+      <meta name="robots" content="index,follow"/>
 
       {/* Google+ / Schema.org */}
       <meta itemprop="name" content="Diego Matos | Trabalhos"/>

@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b802a6c2.chunk.css",
+    "main.js": "/static/js/main.7b3c360f.chunk.js",
+    "main.js.map": "/static/js/main.7b3c360f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.94fc3a04.js",
+    "runtime-main.js.map": "/static/js/runtime-main.94fc3a04.js.map",
+    "static/js/2.f124b36f.chunk.js": "/static/js/2.f124b36f.chunk.js",
+    "static/js/2.f124b36f.chunk.js.map": "/static/js/2.f124b36f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.4ea50c05b13f0a12ebcdc7646f7d8a74.js": "/precache-manifest.4ea50c05b13f0a12ebcdc7646f7d8a74.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.b802a6c2.chunk.css.map": "/static/css/main.b802a6c2.chunk.css.map",
+    "static/js/2.f124b36f.chunk.js.LICENSE.txt": "/static/js/2.f124b36f.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/web-development-banner.ea4a7a48.webp",
+    "static/media/curriculum.docx": "/static/media/curriculum.d41d8cd9.docx",
+    "static/media/flappybird.webp": "/static/media/flappybird.032aa79b.webp",
+    "static/media/foto-perfil.webp": "/static/media/foto-perfil.6ea652b2.webp",
+    "static/media/jogo-da-nave.webp": "/static/media/jogo-da-nave.c4887105.webp",
+    "static/media/logo.webp": "/static/media/logo.58e77cb7.webp",
+    "static/media/super-mario.webp": "/static/media/super-mario.04d3f21d.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.94fc3a04.js",
+    "static/js/2.f124b36f.chunk.js",
+    "static/css/main.b802a6c2.chunk.css",
+    "static/js/main.7b3c360f.chunk.js"
+  ]
+}

@@ -10,7 +10,7 @@ export default function JogoDaNaveSEO() {
       <meta name="description" content="Avalie esse trabalho feito por Diego Matos com seus alunos: O desenvolvimento, com o framework Phaser, de um jogo de nave onde o jogador assume o controle de um piloto perdido no espaço."/>
       <link rel="canonical" href="https://devdiegomatos.com.br/trabalhos/jogo-da-nave"/>
       <meta name="author" content="Diego Matos"/>
-      <meta name="robots" content="index"/>
+      <meta name="robots" content="index,follow"/>
 
       {/* Google+ / Schema.org */}
       <meta itemprop="name" content="Diego Matos | Jogo da Nave"/>

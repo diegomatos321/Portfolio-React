@@ -57,6 +57,10 @@
   margin-bottom: 1em;
 }
 
+.jogo-flappybird{
+  display: grid;
+}
+
 .jogo-container{
   height: 100%;
 }
@@ -105,6 +109,10 @@
 }
 
 .game-screen canvas {
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
   position: absolute;
 }
 

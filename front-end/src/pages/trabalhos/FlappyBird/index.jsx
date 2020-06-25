@@ -29,7 +29,7 @@ export default class FlappyBird extends Component {
           </div>
           <Aside />
           <main className="pagina-apresentacao">
-            <div id="jogo" className="jogo">
+            <div id="jogo" className="jogo jogo-flappybird">
               <div id="jogo-container" className="jogo-container flappybird">
                 <div
                   id="formulario-container"
@@ -38,7 +38,6 @@ export default class FlappyBird extends Component {
                   <form
                     id="game-formulario"
                     className="formulario"
-                    onSubmit={this.submitHandler}
                   >
                     <h3>Digite um nickname</h3>
                     <input
@@ -73,8 +72,9 @@ export default class FlappyBird extends Component {
               <h3>Veja o código desse jogo</h3>
               <div className="btn widget-item">
                 <a
-                  href="https://github.com/diegomatos321 "
+                  href="https://github.com/diegomatos321/Jogo-Flappy-Bird-COM-Banco-de-Dados"
                   rel="noopener noreferrer"
+                  target="_blank"
                 >
                   <i className="fab fa-github-square"></i>
                   <p className="font-size-small">GitHub</p>
