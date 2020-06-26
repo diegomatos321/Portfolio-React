@@ -28,9 +28,8 @@ app.use(express.json());
 
 // DATA BASE
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
-
-mongoose.connection.on('error', error => console.log("Ocorreu um erro ao conectar na base de dados: ", error));
-mongoose.connection.once('open', () => console.log("Conectado na base de dados"));
+.then(() => console.log("Conectado a base de dados"))
+.catch(error => console.log("Erro a conectador ao bando de dados: ", error))
 
 // ROUTES
 const trabalhosRouter = require("./routes/trabalhosRouter");
