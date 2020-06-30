@@ -26,38 +26,17 @@ export default function Header() {
             </li>
             <ul className="drop-down">
               <li className="sub-nav-item">
-                <Link
-                  to={{
-                    pathname: "/trabalhos/flappybird",
-                    state: {
-                      refresh: true,
-                    },
-                  }}
-                >
+                <Link to="/trabalhos/flappybird">
                   FlappyBird
                 </Link>
               </li>
               <li className="sub-nav-item">
-                <Link
-                  to={{
-                    pathname: "/trabalhos/jogo-da-nave",
-                    state: {
-                      refresh: true,
-                    },
-                  }}
-                >
+                <Link to="/trabalhos/jogo-da-nave">
                   Jogo da Nave
                 </Link>
               </li>
               <li className="sub-nav-item">
-                <Link
-                  to={{
-                    pathname: "/trabalhos/super-mario",
-                    state: {
-                      refresh: true,
-                    },
-                  }}
-                >
+                <Link to="/trabalhos/super-mario">
                   Super Mario
                 </Link>
               </li>

@@ -16,6 +16,7 @@ export default class FlappyBird extends Component {
   componentWillUnmount = () => {
     let flappybirdJS = document.getElementById("flappybirdJS");
     flappybirdJS.remove();
+    window.location.reload()
   };
 
   render() {

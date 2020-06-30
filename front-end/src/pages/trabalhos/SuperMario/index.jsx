@@ -23,6 +23,7 @@ export default class index extends Component {
 
     phaser.remove();
     jogo.remove();
+    window.location.reload()
   }
 
   render() {

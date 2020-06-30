@@ -30,10 +30,7 @@ export default class Trabalhos extends Component {
     }
     return (
       <div id="mansory-grid" className="mansory-grid">
-        <Link to={{
-          pathname: "/trabalhos/flappybird",
-          state: { refresh: true}
-          }} className="mansory-item">
+        <Link to= "/trabalhos/flappybird" className="mansory-item">
           <article>
             <figure>
               <img
@@ -53,10 +50,7 @@ export default class Trabalhos extends Component {
           </article>
         </Link>
 
-        <Link to={{
-          pathname: "/trabalhos/jogo-da-nave",
-          state: { refresh: true}
-          }} className="mansory-item">
+        <Link to="/trabalhos/jogo-da-nave" className="mansory-item">
           <article>
             <figure>
               <img
@@ -74,10 +68,7 @@ export default class Trabalhos extends Component {
             </figure>
           </article>
         </Link>
-        <Link to={{
-          pathname: "/trabalhos/super-mario",
-          state: { refresh: true}
-          }} className="mansory-item">
+        <Link to="/trabalhos/super-mario" className="mansory-item">
           <article>
             <figure>
               <img
