@@ -3,6 +3,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import Home from "./pages/home"
 import Trabalhos from "./pages/trabalhos"
+import PlataformaDnD from "./pages/PlataformaDnD"
 import Contato from "./pages/contato"
 
 import Header from "./components/Header"
@@ -15,9 +16,10 @@ function App() {
         <Header/>
         <Switch>
           <Route exact path="/" component={Home}/>
-          <Route exact path="/trabalhos" component={Trabalhos}/>
+          <Route exact path="/trabalhos/" component={Trabalhos}/>
           <Route path="/trabalhos/:nomeDoTrabalho" component={Trabalhos}/>
-          <Route path="/contato" component={Contato}/>
+          <Route path="/plataforma-dnd/" component={PlataformaDnD}/>
+          <Route path="/contato/" component={Contato}/>
         </Switch>
         <Footer/>
       </BrowserRouter>
