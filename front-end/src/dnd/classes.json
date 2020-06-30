@@ -1,0 +1,47 @@
+[
+  {
+    "nome" : "Bárbaro",
+    "tipo" : "Classe",
+    "slug" : "barbaro",
+    "descricao" : ["Um feroz guerreiro de origem primitiva que pode entrar em fúria durante uma batalha."],
+    "dicas" : "",
+    "conjurador" : false,
+    "caracteristicas" : {
+      "dado-de-vida" : {
+        "lados" : "",
+        "minimo" : 0
+      },
+      "proficiencias" :[
+        {
+          "nome" : "",
+          "tipo" : ""
+        }
+      ],
+      "teste-de-resistencia" : [""],
+      "pericias" : {
+        "quantidade" : 0,
+        "opcoes" : [""]
+      },
+      "equipamentos" : [""],
+      "arquetipos" : [
+        {
+          "nome" : "",
+          "descricao" : ""
+        }
+      ]
+    },
+    "habilidades" : [
+      {
+        "nome" : "",
+        "origem" : "classe",
+        "descricao" : [""],
+        "arquetipo" : "",
+        "nivel" : 0,
+        "modificador" : {
+          "nome" : "",
+          "bonus" : [""]
+        }
+      }
+    ]
+  }
+]
