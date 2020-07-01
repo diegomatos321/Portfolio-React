@@ -3,44 +3,237 @@
     "nome" : "Bárbaro",
     "tipo" : "Classe",
     "slug" : "barbaro",
-    "descricao" : ["Um feroz guerreiro de origem primitiva que pode entrar em fúria durante uma batalha."],
-    "dicas" : "",
+    "descricao" : ["Um feroz guerreiro de origem primitiva que pode entrar em fúria durante uma batalha.", "As pessoas das cidades e vilas costumam se vangloriar de como seus meios civilizados os diferencia dos animais, como se renegar sua própria natureza fosse um indicio de superioridade. Para um bárbaro, no entanto, a civilização não é nenhuma virtude, mas um sinal de fraqueza. Os fortes abraçam a sua natureza selvagem – instintos aguçados, fisicalidade primitiva e fúria voraz.", "Nem todos os membros de uma tribo ditos como 'bárbaros' por  descendentes de sociedades civilizadas pertencem a classe bárbaro. Um bárbaro de verdade dentre essas pessoas é tão incomum quanto um guerreiro bem treinado em uma cidade, e ele possui um papel similar como protetor do povo e líder em tempos de"],
+    "dicas" : "Coloque seu valor de habilidade mais alto em Força, seguido de Constituição. Segundo, escolha o antecedente forasteiro.",
     "conjurador" : false,
     "caracteristicas" : {
       "dado-de-vida" : {
-        "lados" : "",
-        "minimo" : 0
+        "lados" : 12,
+        "minimo" : 7
       },
       "proficiencias" :[
         {
-          "nome" : "",
-          "tipo" : ""
+          "nome" : "Armaduras Leves",
+          "tipo" : "Armadura"
+        },
+        {
+          "nome" : "Armaduras Médias",
+          "tipo" : "Armadura"
+        },
+        {
+          "nome" : "Armaduras Escudos",
+          "tipo" : "Armadura"
+        },
+        {
+          "nome" : "Armas Simples",
+          "tipo" : "Armas"
+        },
+        {
+          "nome" : "Armas Marcias",
+          "tipo" : "Armas"
         }
       ],
-      "teste-de-resistencia" : [""],
+      "teste-de-resistencia" : ["FOR", "CON"],
       "pericias" : {
-        "quantidade" : 0,
-        "opcoes" : [""]
+        "escolha" : 2,
+        "entre" : ["Adestrar Animais", "Atletismo", "Intimidacao", "Natureza", "Percepcao", "Sobrevivencia"]
       },
-      "equipamentos" : [""],
+      "equipamentos" : [
+        {
+          "nome" : "Machado Grande ou qualquer arma marcial",
+          "quantidade" : 1,
+          "tipo" :"Arma"
+        },
+        {
+          "nome" : "Dois machados de mão ou qualquer arma simples",
+          "quantidade" : 1,
+          "tipo" : "Arma"
+        },
+        {
+          "nome" : "Pacote de Aventureiro",
+          "quantidade" : 1,
+          "tipo" : "Pacote de Equipamento"
+        },
+        {
+          "nome" : "Azagaias",
+          "quantidade" : 4,
+          "tipo" : "Arma"
+        }
+      ],
       "arquetipos" : [
         {
-          "nome" : "",
-          "descricao" : ""
+          "nome" : "Caminho do Berserker",
+          "descricao" : "A fúria queima no coração de cada bárbaro, uma queimação que leva-os a grandeza. Bárbaros diferentes, no entanto, atribuem suas fúrias a fontes diferentes. Para alguns, é um reservatório interno onde a dor, aflição e raiva são forjados numa fúria dura como aço. Outros veem-na como uma bênção  espiritual, uma dadiva de um totem animal."
+        },
+        {
+          "nome" : "Caminho do Guerreiro Totêmico",
+          "descricao" : "O Caminho do Guerreiro Totêmico é uma jornada espiritual, à partir do momento que o bárbaro aceita um espirito animal como seu guia, protetor e inspiração. Em batalha, seu espirito totêmico preenche você com força sobrenatural, adicionando combustível mágico a sua fúria bárbara. A maioria das tribos bárbaras consideram que um animal totêmico possui parentesco a um clã em particular. Em tais casos, é incomum a um indivíduo possuir mais de um espirito animal totêmico, apesar de existirem exceções."
         }
       ]
     },
     "habilidades" : [
       {
-        "nome" : "",
+        "nome" : "Fúria",
         "origem" : "classe",
-        "descricao" : [""],
-        "arquetipo" : "",
-        "nivel" : 0,
-        "modificador" : {
-          "nome" : "",
-          "bonus" : [""]
-        }
+        "descricao" : "<p>Em batalha, você luta com uma ferocidade primitiva. No seu turno, você pode entrar em fúria com uma ação bônus</p><p>Enquanto estiver em fúria, você recebe os seguintes benefícios se você não estiver vestindo uma armadura pesada:</p><ul><li>Você tem vantagem em testes de Força e testes de resistência de Força.</li><li>Quando você desferir um ataque com arma corpo-acorpo usando Força, você recebe um bônus nas jogadas de dano que aumenta à medida que você adquire níveis de bárbaro, como mostrado na coluna Dano de Fúria na tabela O Bárbaro.</li><li>Você possui resistência contra dano de concussão, cortante e perfurante.</li></ul><p>Se você for capaz de conjurar magias, você não poderá conjurá-las ou se concentrar nelas enquanto estiver em fúria</p><p>Sua fúria dura por 1 minuto. Ela termina prematuramente se você cair inconsciente ou se seu turno acabar e você não tiver atacado nenhuma criatura hostil desde seu último turno ou não tiver sofrido dano nesse período. Você também pode terminar sua fúria no seu turno com uma ação bônus.</p><p>Quando você tiver usado a quantidade de fúrias mostrada para o seu nível de bárbaro na coluna Fúrias da tabela O Bárbaro, você precisará terminar um descanso longo antes de poder entrar em fúria novamente</p>",
+        "nivel" : 1
+      },
+      {
+        "nome" : "Defesa sem Armadura",
+        "origem" : "classe",
+        "descricao" : "<p>Quando você não estiver vestindo qualquer armadura, sua Classe de Armadura será 10 + seu modificador de Destreza + seu modificador de Constituição. Você pode usar um escudo e continuar a receber esse benefício.</p>",
+        "nivel" : 1,
+        "modificadores" : [
+          {
+          "nome" : "CA",
+          "calculo" : [10, "+DES", "+CON"]
+          }
+        ]
+      },
+      {
+        "nome" : "Ataque Descuidado",
+        "origem" : "classe",
+        "descricao" : "<p>A partir do 2° nível, você pode desistir de toda preocupação com sua defesa para atacar com um desespero feroz. Quando você fizer o seu primeiro ataque no turno, você pode decidir atacar descuidadamente. Fazer isso lhe concede vantagem nas jogadas de ataque com armas corpo-a-corpo usando Força durante seu turno, porém, as jogadas de ataques feitas contra você possuem vantagem até o início do seu próximo turno.</p>",
+        "nivel" : 2
+      },
+      {
+        "nome" : "Sentido de Perigo",
+        "origem" : "classe",
+        "descricao" : "<p>No 2° nível, você adquire um sentido sobrenatural de quando as coisas próximas não estão como deveriam, concedendo a você uma chance maior quando estiver evitando perigos.</p><p>Você possui vantagem em testes de resistência de Destreza contra efeitos que você possa ver, como armadilhas e magias. Para receber esse benefício você não pode estar cego, surdo ou incapacitado.</p>",
+        "nivel" : 2
+      },
+      {
+        "nome" : "Caminho Primitivo",
+        "origem" : "classe",
+        "descricao" : "<p>No 3° nível, você escolhe um caminho que molda a natureza da sua fúria. Escolha o Caminho do Furioso ou o Caminho do Guerreiro Totêmico, ambos detalhados no final da descrição de classe. Sua escolha lhe concederá características no 3° nível e novamente no 6°, 10° e 14° níveis.</p>",
+        "nivel" : 3
+      },
+      {
+        "nome" : "Incremento no Valor de Habilidade",
+        "origem" : "classe",
+        "descricao" : "<p>Quando você atinge o 4° nível e novamente no 8°, 12°, 16° e 19° nível, você pode aumentar um valor de habilidade, à sua escolha, em 2 ou você pode aumentar dois valores de habilidade, à sua escolha em 1. Como padrão, você não pode elevar um valor de habilidade acima de 20 com essa característica.</p>",
+        "nivel" : 4
+      },
+      {
+        "nome" : "Ataque Extra",
+        "origem" : "classe",
+        "descricao" : "<p>A partir do 5° nível, você pode atacar duas vezes, ao invés de uma, sempre que você realizar a ação de Ataque no seu turno.</p>",
+        "nivel" : 5
+      },
+      {
+        "nome" : "Movimento Rápido",
+        "origem" : "classe",
+        "descricao" : "<p>Começando no 5° nível, seu deslocamento aumenta em 3 metros enquanto você não estiver vestindo uma armadura pesada.</p>",
+        "nivel" : 5
+      },
+      {
+        "nome" : "Instinto Selvagem",
+        "origem" : "classe",
+        "descricao" : "<p>No 7° nível, seu instinto está tão apurado que você recebe vantagem nas jogadas de iniciativa.</p><p>Além disso, se você estiver surpreso no começo de um combate e não estiver incapacitado, você pode agir normalmente no seu primeiro turno, mas apenas se você entrar em fúria antes de realizar qualquer outra coisa neste turno.</p>",
+        "nivel" : 7
+      },
+      {
+        "nome" : "Crítico Brutal",
+        "origem" : "classe",
+        "descricao" : "<p>A partir do 9° nível, você pode rolar um dado de dano de arma adicional quando estiver determinando o dano extra de um acerto crítico com uma arma corpo-a-corpo. Isso aumenta para dois dados adicionais no 13° nível e três dados adicionais no 17° nível</p>",
+        "nivel" : 9
+      },
+      {
+        "nome" : "Fúria Implacável",
+        "origem" : "classe",
+        "descricao" : "<p>A partir do 11° nível, sua fúria pode manter você lutando independente da gravidade dos seus ferimentos. Se você cair para 0 pontos de vida enquanto estiver em fúria e não morrer, você pode realizar um teste de resistência de Constituição CD 10. Se você for bem sucedido, você volta para 1 ponto de vida ao invés disso.</p><p>Cada vez que você utilizar essa característica após a primeira, a CD aumenta em 5. Assim que você terminar um descanso curto ou longo a CD volta para 10</p>",
+        "nivel" : 11
+      },
+      {
+        "nome" : "Fúria Persistente",
+        "origem" : "classe",
+        "descricao" : "<p>A partir do 15° nível, sua fúria é tão brutal que ela só termina prematuramente se você cair inconsciente ou se você decidir terminá-la.</p>",
+        "nivel" : 15
+      },
+      {
+        "nome" : "Força Indomável",
+        "origem" : "classe",
+        "descricao" : "<p>A partir do 18° nível, se o total de um teste de Força seu for menor que o seu valor de Força, você pode usar esse valor no lugar do resultado.</p>",
+        "nivel" : 18
+      },
+      {
+        "nome" : "Campeão Primitivo",
+        "origem" : "classe",
+        "descricao" : "<p>No 20° nível, você incorpora os poderes da natureza. Seus valores de Força e Constituição aumentam em 4. Seu máximo para esses valores agora é 24.</p>",
+        "nivel" : 20,
+        "modificadores" : [
+          {
+            "nome" : "FOR",
+            "bonus" : ["+4"]
+          },
+          {
+            "nome" : "CON",
+            "bonus" : ["+4"]
+          }
+        ]
+      },
+      {
+        "nome" : "Frenesi",
+        "origem" : "classe",
+        "descricao" : "<p>Começando no momento que você escolhe esse caminho no 3° nível, você pode entrar num frenesi quando estiver em fúria. Se você desejar, pela duração da sua fúria, você pode realizar um único ataque corpo-a-corpo com arma, com uma ação bônus, em cada um de seus turnos após esse. Quando sua fúria acabar, você sofrerá um nível de exaustão.</p>",
+        "arquetipo" : "Caminho do Berserker",
+        "nivel" : 3
+      },
+      {
+        "nome" : "Fúria Inconsciente",
+        "origem" : "classe",
+        "descricao" : "<p>A partir do 6° nível, você não pode ser enfeitiçado ou amedrontado enquanto estiver em fúria. Se você estava enfeitiçado ou amedrontado quando entrou em fúria, o efeito é suspenso pela duração da fúria.</p>",
+        "arquetipo" : "Caminho do Berserker",
+        "nivel" : 6
+      },
+      {
+        "nome" : "Presença Intimidante",
+        "origem" : "classe",
+        "descricao" : "<p>A partir do 10° nível, você pode usar sua ação para amedrontar alguém com sua presença intimidante. Quando o fizer, escolha uma criatura que você possa ver a 9 metros. Se a criatura puder ver ou ouvir você, ela deve ser bem sucedida num teste de resistência de Sabedoria (CD igual a 8 + seu bônus de proficiência + seu modificador de Carisma) ou ficara com medo de você até o fim do seu próximo turno.</p><p>Nos turnos seguintes, você pode usar sua ação para estender a duração desse efeito na criatura amedrontada até o início do seu próximo turno. Esse efeito termina se a criatura terminar seu turno fora da sua linha de visão ou a mais de 18 metros de você.</p><p>Se a criatura for bem sucedida no teste de resistência, você não poderá usar essa característica nessa criatura novamente por 24 horas.</p>",
+        "arquetipo" : "Caminho do Berserker",
+        "nivel" : 10
+      },
+      {
+        "nome" : "Retaliação",
+        "origem" : "classe",
+        "descricao" : "<p>A partir do 14° nível, quando você sofrer dano de uma criatura que esteja a até 1,5 metro de você, você pode usar sua reação para realizar um ataque corpo-a-corpo com arma contra essa criatura.</p>",
+        "arquetipo" : "Caminho do Berserker",
+        "nivel" : 14
+      },
+      {
+        "nome" : "Conselheiro Espiritual",
+        "origem" : "classe",
+        "descricao" : "<p>Seu caminho é buscar a sintonia com o mundo natural, concedendo a você uma afinidade com as bestas. A partir do 3° nível, quando você toma esse caminho, você recebe a habilidade de conjurar as magias sentido bestial e falar com animais, mas apenas na forma de rituais.</p>",
+        "arquetipo" : "Caminho do Guerreiro Totêmico",
+        "nivel" : 3
+      },
+      {
+        "nome" : "Totem Espiritual",
+        "origem" : "classe",
+        "descricao" : "<p>A partir do 3° nível, quando você adota esse caminho, você escolhe um totem espiritual e ganha suas características. Você deve fazer ou adquirir um objeto físico como totem – um amuleto ou adorno similar – que incorpora o pelo ou penas, garras, dente ou ossos do animal totêmico. Se você quiser, você também adquire pequenos atributos físicos que o assemelham ao seu totem espiritual. Por exemplo, se você tiver o totem espiritual do urso, você seria incomumente peludo e de pele grossa, ou se o seu totem for a águia, seu olhos teriam um brilho amarelado.</p><p>Seu totem animal deve ser um animal relacionado aos listados aqui, mas pode ser um mais apropriado a sua terra natal. Por exemplo, você poderia escolher falcão ou abutre ao invés de águia</p><ul><li><strong>Águia</strong>: Quando estiver em fúria e não estiver vestindo uma armadura pesada, as outras criaturas terão desvantagem nas jogadas de ataque de oportunidade contra você e você pode usar a ação de Disparada como uma ação bônus no seu turno. O espirito da águia torna você um predador que pode vagar pelo meio da briga com facilidade.</li><li><strong>Lobo</strong>: Quando estiver em fúria, seus amigos tem vantagem nas jogadas de ataque corpo-a-corpo realizadas contra qualquer criatura a 1,5 metro de você que seja hostil a você. O espirito do lobo transforma você em um líder de caça. </li><li><strong>Urso</strong>: Quando em fúria, você adquire resistência a todos os tipos de dano, exceto dano psíquico. O espirito do urso torna você vigoroso o suficiente para permanecer de pé diante de qualquer castigo.</li></ul>",
+        "arquetipo" : "Caminho do Guerreiro Totêmico",
+        "nivel" : 3
+      },
+      {
+        "nome" : "Aspecto da Besta",
+        "origem" : "classe",
+        "descricao" : "<p>No 6° nível, você adquire um benefício místico baseado no totem que você escolheu. Você pode escolher o mesmo animal que selecionou no 3° nível ou um diferente:</p><ul><li><strong>Águia</strong>: Você ganha a visão aguçada de uma águia. Você pode ver a até 1,6 km sem dificuldade, sendo capaz de discernir até os menores detalhes quando estiver olhando para algo a menos de 30 metros de você. Além disso, penumbra não impõem desvantagem nos seus testes de Sabedori (Percepção).</li><li><strong>Lobo</strong>: Você ganha a sensibilidade predatória de um lobo. Você pode rastrear outras criaturas quando estiver viajando a passo rápido e você pode se mover furtivamente quando estiver viajando a passo normal.</li><li><strong>Urso</strong>: Você ganha a força de um urso. Sua capacidade de carga (incluindo carga máxima e capacidade de erguer) é dobrada e você tem vantagem em testes de Força realizados para empurrar, puxar, erguer ou quebrar objetos.</li></ul>",
+        "arquetipo" : "Caminho do Guerreiro Totêmico",
+        "nivel" : 6
+      },
+      {
+        "nome" : "Andarilho Espiritual",
+        "origem" : "classe",
+        "descricao" : "<p>No 10° nível, você pode conjurar a magia comunhão com a natureza, mas apenas como um ritual. Quando o fizer, uma versão espiritual de um dos animais que você escolheu como Totem Espiritual ou Aspecto da Besta aparece para você para transmitir a informação que você busca.</p>",
+        "arquetipo" : "Caminho do Guerreiro Totêmico",
+        "nivel" : 10
+      },
+      {
+        "nome" : "Sintonia Totêmica",
+        "origem" : "classe",
+        "descricao" : "<p>No 14° nível, você ganha um benefício magico baseado em um totem animal, à sua escolha. Você pode escolher o mesmo animal que selecionou anteriormente ou um diferente:</p><ul><li><strong>Águia</strong>: Quando estiver em fúria, você adquire um deslocamento de voo igual ao seu deslocamento de caminhada. Esse benefício funciona apenas em pequenos explosões: você cai se terminar seu turno no ar e não tiver nada em que possa se agarrar.</li><li><strong>Lobo</strong>: Quando estiver em fúria, você pode usar uma ação bônus no seu turno para derrubar uma criatura Grande ou menor no chão quando você atingi-la com um ataque corpo-a-corpo com arma.</li><li><strong>Urso</strong>: Quando estiver em fúria, qualquer criatura a até 1,5 metro de você que for hostil a você terá desvantagem nas jogadas de ataque contra outros alvos além de você ou outro personagem com essa característica. Um inimigo é imune a esse efeito se ele não puder ver ou ouvir você ou caso ele não possa ser amedrontado.</li></ul>",
+        "arquetipo" : "Caminho do Guerreiro Totêmico",
+        "nivel" : 14
       }
     ]
   }

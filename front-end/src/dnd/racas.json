@@ -12,34 +12,34 @@
     "proficiencas": {
       "ganha": [
         {
-          "nome": "Machado de Batalha",
+          "nome": "Machados de Batalha",
           "tipo": "Arma"
         },
         {
-          "nome": "Machadinha",
+          "nome": "Machadinhas",
           "tipo": "Arma"
         },
         {
-          "nome": "Martelo Leve",
+          "nome": "Martelos Leves",
           "tipo": "Arma"
         },
         {
-          "nome": "Martelo de Guerra",
+          "nome": "Martelos de Guerra",
           "tipo": "Arma"
         }
       ],
       "escolhe": [
         {
-          "nome": "Ferramenta de Ferreiro",
-          "tipo": "Ferramenta"
+          "nome": "Ferramentas de Ferreiro",
+          "tipo": "Ferramentas"
         },
         {
-          "nome": "Suprimento de Cervejeiro",
-          "tipo": "Ferramenta"
+          "nome": "Suprimentos de Cervejeiro",
+          "tipo": "Ferramentas"
         },
         {
-          "nome": "Ferramenta de Pedreiro",
-          "tipo": "Ferramenta"
+          "nome": "Ferramentas de Pedreiro",
+          "tipo": "Ferramentas"
         }
       ]
     },
@@ -92,7 +92,7 @@
         "descricao": "Você tem proficiência com machados de batalha, machadinhas, martelos leves e martelos de guerra."
       },
       {
-        "nome": "Proficiência com Ferramenta",
+        "nome": "Proficiência com Ferramentas",
         "origem": "raca",
         "descricao": "Você tem proficiência em uma ferramenta de artesão à sua escolha entre: ferramentas de  ferreiro, suprimentos de cervejeiro ou ferramentas de pedreiro."
       },
@@ -141,42 +141,42 @@
     "proficiencas": {
       "ganha": [
         {
-          "nome": "Machado de Batalha",
+          "nome": "Machados de Batalha",
           "tipo": "Arma"
         },
         {
-          "nome": "Machadinha",
+          "nome": "Machadinhas",
           "tipo": "Arma"
         },
         {
-          "nome": "Martelo Leve",
+          "nome": "Martelos Leves",
           "tipo": "Arma"
         },
         {
-          "nome": "Martelo de Guerra",
+          "nome": "Martelos de Guerra",
           "tipo": "Arma"
         },
         {
-          "nome": "Armadura Leve",
+          "nome": "Armaduras Leves",
           "tipo": "Armadura"
         },
         {
-          "nome": "Armadura Média",
+          "nome": "Armaduras Médias",
           "tipo": "Armadura"
         }
       ],
       "escolhe": [
         {
-          "nome": "Ferramenta de Ferreiro",
-          "tipo": "Ferramenta"
+          "nome": "Ferramentas de Ferreiro",
+          "tipo": "Ferramentas"
         },
         {
-          "nome": "Suprimento de Cervejeiro",
-          "tipo": "Ferramenta"
+          "nome": "Suprimentos de Cervejeiro",
+          "tipo": "Ferramentas"
         },
         {
-          "nome": "Ferramenta de Pedreiro",
-          "tipo": "Ferramenta"
+          "nome": "Ferramentas de Pedreiro",
+          "tipo": "Ferramentas"
         }
       ]
     },
@@ -229,7 +229,7 @@
         "descricao": "Você tem proficiência com machados de batalha, machadinhas, martelos leves e martelos de guerra."
       },
       {
-        "nome": "Proficiência com Ferramenta",
+        "nome": "Proficiência com Ferramentas",
         "origem": "raca",
         "descricao": "Você tem proficiência em uma ferramenta de artesão à sua escolha entre: ferramentas de  ferreiro, suprimentos de cervejeiro ou ferramentas de pedreiro."
       },
@@ -278,19 +278,19 @@
           "tipo": "Pericia"
         },
         {
-          "nome": "Espada Longa",
+          "nome": "Espadas Longas",
           "tipo": "Arma"
         },
         {
-          "nome": "Espada Curta",
+          "nome": "Espadas Curtas",
           "tipo": "Arma"
         },
         {
-          "nome": "Arco Longo",
+          "nome": "Arcos Longos",
           "tipo": "Arma"
         },
         {
-          "nome": "Arco Curto",
+          "nome": "Arcos Curtos",
           "tipo": "Arma"
         }
       ],
@@ -416,19 +416,19 @@
           "tipo": "Pericia"
         },
         {
-          "nome": "Espada Longa",
+          "nome": "Espadas Longas",
           "tipo": "Arma"
         },
         {
-          "nome": "Espada Curta",
+          "nome": "Espadas Curtas",
           "tipo": "Arma"
         },
         {
-          "nome": "Arco Longo",
+          "nome": "Arcos Longos",
           "tipo": "Arma"
         },
         {
-          "nome": "Arco Curto",
+          "nome": "Arcos Curtos",
           "tipo": "Arma"
         }
       ],
