@@ -1,16 +1,27 @@
-import React from "react";
+import React, { Component } from 'react'
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import PlataformaHome from "./Home"
-import EditorFicha from "./EditorFicha.jsx"
+import CriarFicha from "./CriarFicha"
+import EditorFicha from "./EditorFicha"
+import BuscarFicha from "./BuscarFicha"
+import Adicionar from "./Dashboard"
+import Explorar from "./Explorar"
 
-export default function index() {
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/plataforma-dnd/" component={PlataformaHome} />
-        <Route path="/plataforma-dnd/criar-ficha/" component={EditorFicha} />
-      </Switch>
-    </BrowserRouter>
-  );
+export default class index extends Component {
+  render(){
+    return(
+      <BrowserRouter basename="/plataforma-dnd">
+        <Switch>
+          <Route exact path="/" component={PlataformaHome} />
+          <Route path="/criar-ficha" component={CriarFicha} />
+          <Route path="/buscar-ficha" component={BuscarFicha} />
+          <Route path="/editor-ficha/:id" component={EditorFicha} />
+          <Route path="/explorar" component={Explorar} />
+          <Route path="/explorar/:nome" component={Explorar} />
+          <Route exact path="/dashboard" component={Adicionar} />
+        </Switch>
+      </BrowserRouter>
+    );
+  } 
 }
