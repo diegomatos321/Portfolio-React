@@ -255,8 +255,12 @@ export default class stage {
 
         const alturaPai = this.parentDimensions.height;
 
-        const novaAltura = alturaPai;
-        const novaLargura = novaAltura * this.ratio;
+        let novaAltura = alturaPai;
+        let novaLargura = novaAltura * this.ratio;
+        if(novaLargura >= window.innerWidth){
+            novaLargura = window.innerWidth
+            novaAltura = novaLargura * this.ratio
+        }
 
         this.displayWidth = novaLargura;
         this.displayHeight = novaAltura;
