@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Aside from "./Aside";
-import Helmet from "../../../seo/flappybird";
+import MetaDados from "../../../seo/flappybird";
 import LoadJS from "../../../utils/loadJS";
 
 export default class FlappyBird extends Component {
@@ -23,7 +23,7 @@ export default class FlappyBird extends Component {
   render() {
     return (
       <>
-        <Helmet />
+        <MetaDados />
         <div id="container-trabalho" className="container-trabalho">
           <div className="title">
             <h1>FlappyBird</h1>

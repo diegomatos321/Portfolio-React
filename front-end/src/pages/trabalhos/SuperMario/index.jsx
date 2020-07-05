@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Helmet from "../../../seo/jogo-da-nave";
+import MetaDados from "../../../seo/jogo-da-nave";
 import LoadJS from "../../../utils/loadJS";
 import Aside from "./Aside";
 
@@ -30,7 +30,7 @@ export default class index extends Component {
   render() {
     return (
       <>
-        <Helmet />
+        <MetaDados />
         <div id="container-trabalho" className="container-trabalho">
           <div className="title">
             <h1 className="title">Jogo do Super Mario</h1>
