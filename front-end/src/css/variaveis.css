@@ -1,0 +1,27 @@
+/* Variaveis Customizadas */
+:root {
+  --tamanhoDaFonteH1: 2.4rem;
+  --tamanhoDaFonteH2: 2rem;
+  --tamanhoDaFonteH3: 1.6rem;
+  --tamanhoDaFonteTexto: 1.4rem;
+  --tamanhoDaFonteMenu: 22.4px;
+
+  --corPrincipalTexto: black;
+  --corSecundarioTexto: white;
+
+  --corFundo: #f5f5f5;
+  --corFundoCabecalho: black;
+  --corSecundariaFundo: rgb(221, 221, 50);
+  --corFocus: darkBlue;
+
+  --corDoLink: blue;
+  --corDoLinkHover: #fca311;
+  --corDaPaginaAtual: grey;
+  --corDaBorda: gold;
+}
+
+@media only screen and (max-width: 768px) {
+  :root {
+    --tamanhoDaFonteMenu: 16px;
+  }
+}
