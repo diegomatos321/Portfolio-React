@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {Redirect} from "react-router-dom"
 
 import MetaDados from "../../seo/trabalhos"
 import "../../css/trabalhos.css"
@@ -8,11 +7,11 @@ import Trabalhos from "../../components/Trabalhos"
 import FlappyBird from "./FlappyBird"
 import JogoDaNave from "./JogoDaNave"
 import SuperMario from "./SuperMario"
+import JogoAsteroides from "./JogoAsteroides"
 
 export default class Home extends Component {
   componentDidMount(){
-    const element = document.getElementById("container-trabalho") || document.getElementsByTagName("main")[0];
-    element.scrollIntoView();
+    window.scrollTo(0, 0);
   }
   
   render() {
@@ -21,6 +20,7 @@ export default class Home extends Component {
     if (nomeDoTrabalho === "flappybird") return <FlappyBird /> 
     else if (nomeDoTrabalho === "jogo-da-nave") return <JogoDaNave />
     else if (nomeDoTrabalho === "super-mario") return <SuperMario />
+    else if (nomeDoTrabalho === "jogo-asteroides") return <JogoAsteroides />
     else return (
         <>
           <MetaDados/>

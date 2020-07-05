@@ -23,7 +23,7 @@
 }
 .header .main-nav{
     grid-area: nav;
-    justify-self: right;
+    justify-self: center;
 }
 
 .nav-item{
@@ -78,6 +78,10 @@
         border-top: 0;
         position: relative;
         bottom: 0px;
+    }
+
+    .header .main-nav{
+        justify-self: end;
     }
 
     /* .drop-down{

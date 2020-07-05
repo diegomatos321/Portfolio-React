@@ -9,7 +9,7 @@ import Contato from "./partials/Contato"
 
 export default class Home extends Component {
   componentDidMount(){
-    document.getElementById("header").scrollIntoView()
+    window.scrollTo(0, 0);
   }
   render() {
     return (

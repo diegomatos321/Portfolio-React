@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c14b4101eab799f2f21e097a2e33ac37",
+    "revision": "a52d8ffdca6c17e19115465fa81896b9",
     "url": "/index.html"
   },
   {
-    "revision": "8d27b74c3056e35e9d5e",
-    "url": "/static/css/main.b802a6c2.chunk.css"
+    "revision": "d2bfea32288d4336fc22",
+    "url": "/static/css/main.5542c24a.chunk.css"
   },
   {
-    "revision": "b41c08bbe05fe897fc66",
-    "url": "/static/js/2.f124b36f.chunk.js"
+    "revision": "e4a89a2bf396bddaae8f",
+    "url": "/static/js/2.edbb619b.chunk.js"
   },
   {
     "revision": "a9121f065638518a4b05031a582d1017",
-    "url": "/static/js/2.f124b36f.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.edbb619b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8d27b74c3056e35e9d5e",
-    "url": "/static/js/main.7b3c360f.chunk.js"
+    "revision": "d2bfea32288d4336fc22",
+    "url": "/static/js/main.fe1a5ceb.chunk.js"
   },
   {
     "revision": "164706f99b14ee8c8a5b",
     "url": "/static/js/runtime-main.94fc3a04.js"
+  },
+  {
+    "revision": "039923f64f3e7d67f7e471faa572ab8f",
+    "url": "/static/media/asteroides.039923f6.webp"
   },
   {
     "revision": "c4fdbe66c75527c16bceffa88af70c36",

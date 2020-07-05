@@ -5,6 +5,7 @@ import Aside from "./Aside";
 
 export default class index extends Component {
   componentDidMount() {
+    window.scrollTo(0, 0);
     LoadJS({
       src: "/assets/js/phaser.min.js",
       id: "phaser-framework",
@@ -53,6 +54,7 @@ export default class index extends Component {
                 </a>
               </div>
             </div>
+            <br/>
           </main>
         </div>
       </>

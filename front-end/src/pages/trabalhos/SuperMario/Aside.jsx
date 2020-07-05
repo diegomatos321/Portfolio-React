@@ -12,12 +12,10 @@ export default function Aside() {
             Use as setas para se mover <i className="fas fa-arrows-alt"></i>
           </li>
           <li>
-            Os <strong>blocos surpresa</strong> dropam items{" "}
-            <strong>aleatórios</strong>
+            Os <strong>blocos surpresa</strong> dropam items <strong>aleatórios</strong>
           </li>
           <li>
-            Cuidado com os <strong>Little Gomba</strong> e os{" "}
-            <strong>Koopa Troopers</strong>
+            Cuidado com os <strong>Little Gomba</strong> e os <strong>Koopa Troopers</strong>
           </li>
           <li>Colete as moedas no menor tempo possível !</li>
           <li>Bom Jogo !</li>
@@ -27,21 +25,11 @@ export default function Aside() {
         <h2 className="sub-title">Finalidade do Trabalho</h2>
         <hr />
         <p>
-          Esse jogo teve como objetivo trabalhar com recursos mais avançados da
-          ferramenta{" "}
-          <a
-            href="https://phaser.io/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Phaser
-          </a>
-          :
+          Esse jogo teve como objetivo trabalhar com recursos mais avançados da ferramenta <a href="https://phaser.io/" rel="noopener noreferrer" target="_blank">Phaser</a>:
         </p>
         <ol className="items">
           <li>
-            Renderização de sprites a partir da posição deles em um arquivo{" "}
-            <strong>JSON</strong>.
+            Renderização de sprites a partir da posição deles em um arquivo <strong>JSON</strong>.
           </li>
           <li>
             <i>Drop</i> aleatório dos items

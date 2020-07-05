@@ -40,6 +40,11 @@ export default function Header() {
                   Super Mario
                 </Link>
               </li>
+              <li className="sub-nav-item">
+                <Link to="/trabalhos/jogo-asteroides">
+                  Asteroides
+                </Link>
+              </li>
             </ul>
           </ul>
 

@@ -297,22 +297,24 @@ export let Game = {
         // Chamado quando a tela mudar de tamanho / para redimensionar a tela
         resize: function () {
             const parentDiv = document.getElementById("jogo-container");
-            const clientWidth = parentDiv.clientWidth;
-            const clientHeight = parentDiv.clientHeight;
-            console.log(clientWidth, clientHeight)
+            const parentHeight = parentDiv.clientHeight;
+
+            const windowWidth = window.screen.width;
+            const windowHeight = window.screen.height;
+            console.log(windowWidth, windowHeight)
 
             if (android || ios) {
                 // Certifica de manter as dimensoes retangulares, tanto com o celular na horizontal quanto na vertical
-                if (clientHeight > clientWidth) {
-                    ratio = clientWidth / clientHeight;
+                if (windowHeight > windowWidth) {
+                    ratio = windowWidth / windowHeight;
                 } else {
-                    ratio = clientHeight / clientWidth;
+                    ratio = windowHeight / windowWidth;
                 }
             } else {
                 ratio = GAME_WIDTH / GAME_HEIGHT;
             }
 
-            currentHeight = clientHeight;
+            currentHeight = parentHeight;
             currentWidth = currentHeight * ratio;
             GameScreen.style.width = currentWidth + "px";
             GameScreen.style.height = currentHeight + "px";

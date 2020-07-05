@@ -13,13 +13,13 @@ export default function FlappyBirdSEO() {
           <meta name="robots" content="index,follow"/>
 
           {/* Google+ / Schema.org */}
-          <meta itemprop="name" content="Diego Matos | FlappyBird"/>
+          <meta itemprop="name" content="FlappyBird | Desenvolvedor Diego Matos"/>
           <meta itemprop="description" content="Avalie um dos trabalhos feito por Diego Matos com os alunos, o desenvolvimento de um clone do FlappyBird com integração ao banco de dados MongoDB."/>
           <meta itemprop="image" content={imagemMeta}/>
           {/* <link href="https://plus.google.com/+SuaPagina" rel="publisher"/> */}
 
           {/* Open Graph Facebook */}
-          <meta property="og:title" content="Diego Matos | FlappyBird"/>
+          <meta property="og:title" content="FlappyBird | Desenvolvedor Diego Matos"/>
           <meta property="og:description" content="Avalie um dos trabalhos feito por Diego Matos com os alunos, o desenvolvimento de um clone do FlappyBird com integração ao banco de dados MongoDB."/>
           <meta property="og:url" content="https://devdiegomatos.com.br/trabalhos/flappybird"/>
           <meta property="og:site_name" content="Portfolio do desenvolvedor Diego Matos"/>
@@ -29,7 +29,7 @@ export default function FlappyBirdSEO() {
           <meta property="og:locale" content="pt-BR"/>
 
           {/* Twitter */}
-          <meta name="twitter:title" content="Diego Matos | FlappyBird"/>
+          <meta name="twitter:title" content="FlappyBird | Desenvolvedor Diego Matos"/>
           <meta name="twitter:description" content="Avalie um dos trabalhos feito por Diego Matos com os alunos, o desenvolvimento de um clone do FlappyBird com integração ao banco de dados MongoDB."/>
           <meta name="twitter:url" content="https://devdiegomatos.com.br/trabalhos/flappybird"/>
           <meta name="twitter:card" content="summary"/>

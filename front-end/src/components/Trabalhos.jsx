@@ -5,13 +5,14 @@ import Masonry from "../utils/mansory-custom";
 import flappyBirdImagem from "../uploads/imagens/flappybird.webp";
 import jogoDaNaveImagem from "../uploads/imagens/jogo-da-nave.webp";
 import superMarioImagem from "../uploads/imagens/super-mario.webp";
+import jogoAsteroidesImagem from "../uploads/imagens/asteroides.webp";
 
 export default class Trabalhos extends Component {
   constructor(props){
     super(props);
     this.state = {
       imagensCarregadas: 0,
-      totalDeImagens: 3,
+      totalDeImagens: 4,
     }
   }
 
@@ -42,9 +43,7 @@ export default class Trabalhos extends Component {
                 onLoad={this.imageHandler}
               />
               <figcaption>
-                <strong>Clone</strong> do <strong>FlappyBird</strong> com{" "}
-                <strong>banco de dados</strong>, usando <strong>Node JS</strong>{" "}
-                e <strong>MongoDB</strong> no BackEnd
+                <strong>Clone</strong> do <strong>FlappyBird</strong> com <strong>banco de dados</strong>, usando <strong>Node JS</strong> e <strong>MongoDB</strong> no BackEnd.
               </figcaption>
             </figure>
           </article>
@@ -62,8 +61,7 @@ export default class Trabalhos extends Component {
                 onLoad={this.imageHandler}
               />
               <figcaption>
-                <strong>Jogo da Nave</strong> usando o framework{" "}
-                <strong>Phaser</strong>
+                <strong>Jogo da Nave</strong> usando o framework <strong>Phaser</strong>.
               </figcaption>
             </figure>
           </article>
@@ -80,8 +78,24 @@ export default class Trabalhos extends Component {
                 onLoad={this.imageHandler}
               />
               <figcaption>
-                <strong>Clone</strong> do <strong>Super Mario Bros</strong> {" "} 
-                desenvolvido usando o framework <strong>Phaser</strong>
+                <strong>Clone</strong> do <strong>Super Mario Bros</strong> desenvolvido usando o framework <strong>Phaser</strong>.
+              </figcaption>
+            </figure>
+          </article>
+        </Link>
+        <Link to="/trabalhos/jogo-asteroides" className="mansory-item">
+          <article>
+            <figure>
+              <img
+                className="img"
+                id="jogoAsteroides"
+                src={jogoAsteroidesImagem}
+                alt="Imagem do jogo asteroides"
+                title="Imagem do jogo asteroides"
+                onLoad={this.imageHandler}
+              />
+              <figcaption>
+                <strong>Jogo Asteroides</strong> desenvolvido em JavaScript Puro.
               </figcaption>
             </figure>
           </article>

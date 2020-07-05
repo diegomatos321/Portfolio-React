@@ -5,6 +5,7 @@ import LoadJS from "../../../utils/loadJS";
 
 export default class FlappyBird extends Component {
   componentDidMount = () => {
+    window.scrollTo(0, 0);
     LoadJS({
       id: "flappybirdJS",
       src: "/assets/js/flappybird/index.js",
@@ -16,7 +17,7 @@ export default class FlappyBird extends Component {
   componentWillUnmount = () => {
     let flappybirdJS = document.getElementById("flappybirdJS");
     flappybirdJS.remove();
-    window.location.reload()
+    window.location.reload();
   };
 
   render() {
@@ -32,14 +33,8 @@ export default class FlappyBird extends Component {
           <main className="pagina-apresentacao">
             <div id="jogo" className="jogo jogo-flappybird">
               <div id="jogo-container" className="jogo-container flappybird">
-                <div
-                  id="formulario-container"
-                  className="formulario-container hidden"
-                >
-                  <form
-                    id="game-formulario"
-                    className="formulario"
-                  >
+                <div id="formulario-container" className="formulario-container hidden">
+                  <form id="game-formulario" className="formulario">
                     <h3>Digite um nickname</h3>
                     <input
                       type="text"
@@ -82,6 +77,7 @@ export default class FlappyBird extends Component {
                 </a>
               </div>
             </div>
+            <br />
           </main>
         </div>
       </>
