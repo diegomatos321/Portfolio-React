@@ -61,8 +61,7 @@
 
 .jogo-flappybird, .jogo-asteroides{
   display: grid;
-  justify-items: center;
-  align-content: center;
+  justify-content: center;
 }
 
 .jogo-container{
