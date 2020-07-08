@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
+import ScrollToTop from "../../../utils/scrollToTop"
 
 export default class index extends Component {
+  componentDidMount(){
+    ScrollToTop();
+  }
+
   render() {
     return (
       <main>

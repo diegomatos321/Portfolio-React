@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import Aside from "./Aside";
 import MetaDados from "../../../seo/flappybird";
 import LoadJS from "../../../utils/loadJS";
+import ScrollToTop from "../../../utils/scrollToTop";
 
 export default class FlappyBird extends Component {
   componentDidMount = () => {
-    window.scrollTo(0, 0);
+    ScrollToTop();
     LoadJS({
       id: "flappybirdJS",
       src: "/assets/js/flappybird/index.js",
@@ -24,7 +25,7 @@ export default class FlappyBird extends Component {
     return (
       <>
         <MetaDados />
-        <div id="container-trabalho" className="container-trabalho">
+        <div id="container-trabalho" className="main container-trabalho">
           <div className="title">
             <h1>FlappyBird</h1>
             <hr />

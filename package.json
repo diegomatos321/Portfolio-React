@@ -4,7 +4,7 @@
   "description": "Portfolio desenvolido com React, Express e MongoDB",
   "main": "app.js",
   "scripts": {
-    "start" : "node app.js",
+    "start": "node app.js",
     "devStart": "nodemon app.js"
   },
   "author": "Diego Matos",

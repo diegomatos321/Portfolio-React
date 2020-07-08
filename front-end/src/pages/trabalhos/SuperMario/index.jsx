@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import MetaDados from "../../../seo/jogo-da-nave";
 import LoadJS from "../../../utils/loadJS";
 import Aside from "./Aside";
+import ScrollToTop from "../../../utils/scrollToTop";
 
 export default class index extends Component {
   componentDidMount() {
-    window.scrollTo(0, 0);
+    ScrollToTop();
     LoadJS({
       src: "/assets/js/phaser.min.js",
       id: "phaser-framework",
@@ -31,7 +32,7 @@ export default class index extends Component {
     return (
       <>
         <MetaDados />
-        <div id="container-trabalho" className="container-trabalho">
+        <div id="container-trabalho" className="main container-trabalho">
           <div className="title">
             <h1 className="title">Jogo do Super Mario</h1>
             <hr />

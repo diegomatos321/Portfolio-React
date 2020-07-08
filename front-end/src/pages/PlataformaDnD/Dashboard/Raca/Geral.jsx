@@ -3,6 +3,7 @@ import {Link} from "react-router-dom"
 
 export default class Geral extends Component {
   render() {
+    const url = window.location.pathname;
     return (
       <main>
         <h1>Raças</h1>
@@ -13,7 +14,7 @@ export default class Geral extends Component {
             <button>Buscar</button>
           </fieldset>
         </form>
-          <Link to="/novo">Adicionar nova Raça</Link>
+          <Link to={`${url}/novo`}>Adicionar nova Raça</Link>
         <div>
           Aqui irá aparecer umas lista de todas as raças
         </div>

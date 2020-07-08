@@ -7,6 +7,8 @@ import Sobre from "./partials/Sobre"
 import TodosTrabalhos from "./partials/TrabalhosHome"
 import Contato from "./partials/Contato"
 
+import ScrollToTop from "../../utils/scrollToTop"
+
 export default class Home extends Component {
   constructor(props){
     super(props)
@@ -19,13 +21,13 @@ export default class Home extends Component {
       element.scrollIntoView();
       return
     }
-    window.scrollTo(0, 0);
+    ScrollToTop();
   }
   render() {
     return (
       <>
         <MetaDados/>
-        <main>
+        <main className="main">
           <Apresentacao/>
           <Sobre/>
           <TodosTrabalhos/>

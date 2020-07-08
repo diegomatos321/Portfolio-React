@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
+import ScrollToTop from "../../../utils/scrollToTop"
 
 export default class AdicionarAntecedente extends Component {
+  componentDidMount(){
+    ScrollToTop();
+  }
+
   render() {
     return (
       <main>

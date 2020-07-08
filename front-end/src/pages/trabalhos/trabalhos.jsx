@@ -2,18 +2,18 @@ import React, { Component } from 'react'
 
 import MetaDados from "../../seo/trabalhos"
 import TodosTrabalhos from "../../components/TodosTrabalhos"
-import "../../css/trabalhos.css"
+import ScrollToTop from "../../utils/scrollToTop"
 
 export default class trabalhos extends Component {
   componentDidMount(){
-    window.scrollTo(0, 0);
+    ScrollToTop();
   }
 
   render() {
     return (
       <>
         <MetaDados/>
-        <main>
+        <main className="main">
           <h1 className="title">Meus Trabalhos</h1>
           <hr/>
           <section id="trabalhos">

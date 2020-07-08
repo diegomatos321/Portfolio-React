@@ -1,0 +1,84 @@
+.plataforma-dashboard-container{
+  max-width: 1200px;
+  padding: 1em;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "title"
+  "aside"
+  "preview";
+}
+
+.plataforma-dashboard-container .title{
+  grid-area: title;
+}
+
+.plataforma-dashboard-container .aside{
+  grid-area: aside;
+}
+
+.plataforma-dashboard-container .preview{
+  grid-area: preview;
+}
+
+@media only screen and (min-width: 768px){
+  .plataforma-dashboard-container{
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    "title title"
+    "preview aside";
+  }
+}
+
+.accordion{
+  cursor: pointer;
+  width: 100%;
+  background-color: #eee;
+  color: #444;
+  padding: 0.5em;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.idiomas, .proficiencias{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: 0.5em;
+}
+
+.panel {
+  padding: 0;
+  background-color: white;
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 150ms;
+}
+
+.panel-item{
+  width: 100%;
+  background-color: #eee;
+  color: #444;
+  padding: 0.5em;
+  animation-name: aparecer;
+  animation-duration: 150ms;
+}
+
+@keyframes aparecer{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.panel-active{
+  padding: 0.5em;
+  max-height: 200px;
+  opacity: 1;
+}

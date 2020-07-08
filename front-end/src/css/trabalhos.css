@@ -1,16 +1,16 @@
-.site {
+/* .site {
   grid-template-areas:
     "header"
     "mensagem"
     "main-container"
     "footer";
-}
+} */
 
 .container-trabalho{
   max-width: 1200px;
   padding: 1em;
   margin-bottom: 1em;
-  grid-area: main-container;
+  grid-area: main;
   display:grid;
   margin:auto;
   grid-template-columns: 1fr;
@@ -20,15 +20,15 @@
   "main";
 }
 
-.title {
+.container-trabalho .title {
   grid-area: title;
 }
 
-.aside {
+.container-trabalho .aside {
   grid-area: aside;
 }
 
-.pagina-apresentacao {
+.container-trabalho .pagina-apresentacao {
   grid-area: main;
   height: 90vh;
 }

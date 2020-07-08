@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import MetaDados from "../../seo/contato"
 import Mensagem from "../../components/Mensagem.jsx";
+import ScrollToTop from "../../utils/scrollToTop";
 
 export default class Contato extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ export default class Contato extends Component {
   }
 
   componentDidUpdate(){
-    window.scrollTo(0, 0);
+    ScrollToTop();
   }
 
   submitHandler = async (e) => {
