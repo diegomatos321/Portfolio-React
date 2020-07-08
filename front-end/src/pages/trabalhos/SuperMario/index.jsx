@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import Helmet from "../../../seo/jogo-da-nave";
+import MetaDados from "../../../seo/jogo-da-nave";
 import LoadJS from "../../../utils/loadJS";
 import Aside from "./Aside";
 
 export default class index extends Component {
   componentDidMount() {
+    window.scrollTo(0, 0);
     LoadJS({
       src: "/assets/js/phaser.min.js",
       id: "phaser-framework",
@@ -29,10 +30,10 @@ export default class index extends Component {
   render() {
     return (
       <>
-        <Helmet />
+        <MetaDados />
         <div id="container-trabalho" className="container-trabalho">
           <div className="title">
-            <h1 className="title">Jogo da Nave</h1>
+            <h1 className="title">Jogo do Super Mario</h1>
             <hr />
           </div>
           <Aside />
@@ -53,6 +54,7 @@ export default class index extends Component {
                 </a>
               </div>
             </div>
+            <br/>
           </main>
         </div>
       </>

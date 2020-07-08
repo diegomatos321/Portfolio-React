@@ -9,6 +9,7 @@
 .container-trabalho{
   max-width: 1200px;
   padding: 1em;
+  margin-bottom: 1em;
   grid-area: main-container;
   display:grid;
   margin:auto;
@@ -25,6 +26,11 @@
 
 .aside {
   grid-area: aside;
+}
+
+.pagina-apresentacao {
+  grid-area: main;
+  height: 90vh;
 }
 
 .warning {
@@ -48,17 +54,14 @@
   margin-left: 0.3em;
 }
 
-.pagina-apresentacao {
-  height: 90vh;
-}
-
 .jogo{
   height: 90%;
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
 }
 
-.jogo-flappybird{
+.jogo-flappybird, .jogo-asteroides{
   display: grid;
+  justify-content: center;
 }
 
 .jogo-container{
@@ -79,8 +82,8 @@
   color:black;
 }
 
-.flappybird {
-  justify-self: center;
+.asteroides div{
+  height: 100%;
 }
 
 .formulario-container{

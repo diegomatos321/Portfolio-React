@@ -16,7 +16,7 @@ export default class Contato extends Component {
   }
 
   componentDidUpdate(){
-    document.getElementById("header").scrollIntoView()
+    window.scrollTo(0, 0);
   }
 
   submitHandler = async (e) => {

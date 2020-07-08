@@ -16,7 +16,7 @@ export default function ContatoSEO() {
       <meta name="robots" content="index,follow" />
 
       {/* Google+ / Schema.org */}
-      <meta itemprop="name" content="Diego Matos | Contato" />
+      <meta itemprop="name" content="Contato | Desenvolvedor Diego Matos" />
       <meta
         itemprop="description"
         content="Página para entrar em contato com o desenvolvedor Diego Matos."
@@ -25,7 +25,7 @@ export default function ContatoSEO() {
       {/* <link href="https://plus.google.com/+SuaPagina" rel="publisher"/> */}
 
       {/* Open Graph Facebook */}
-      <meta property="og:title" content="Diego Matos | Contato" />
+      <meta property="og:title" content="Contato | Desenvolvedor Diego Matos" />
       <meta
         property="og:description"
         content="Página para entrar em contato com o desenvolvedor Diego Matos."
@@ -44,7 +44,7 @@ export default function ContatoSEO() {
       <meta property="og:locale" content="pt-BR" />
 
       {/* Twitter */}
-      <meta name="twitter:title" content="Diego Matos | Contato" />
+      <meta name="twitter:title" content="Contato | Desenvolvedor Diego Matos" />
       <meta
         name="twitter:description"
         content="Página para entrar em contato com o desenvolvedor Diego Matos."

@@ -24,37 +24,25 @@ export default function Aside() {
         <h2 className="sub-title">Finalidade do trabalho</h2>
         <hr />
         <p>
-          Esse jogo foi desenvolvido com o <i>framework</i>{" "}
-          <a
-            href="https://phaser.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Phaser
-          </a>
-          , nele vemos tópicos mais avançados em relação ao{" "}
-          <a href="/trabalhos/flappybird">flappybird</a>, como:
+          Esse jogo foi desenvolvido com o <i>framework</i> <a href="https://phaser.io/" target="_blank" rel="noopener  noreferrer" >Phaser</a> , nele vemos tópicos mais avançados em relação ao <a href="/trabalhos/flappybird">flappybird</a>, como:
         </p>
         <ol className="items">
           <li>Carregamento prévio das imagens.</li>
           <li>Melhor uso dos áudios.</li>
           <li>
-            Adicionar <strong>imortalidade</strong> temporária após a morte do
-            jogador.
+            Adicionar <strong>imortalidade</strong> temporária após a morte do jogador.
           </li>
           <li>
-            Não há cena de <strong>Game Over</strong>, deixando o jogo mais{" "}
-            <strong>dinâmico</strong>.
+            Não há cena de <strong>Game Over</strong>, deixando o jogo mais <strong>dinâmico</strong>.
           </li>
           <li>
-            Demonstração de diferentes formas de se desenvolver mecânicas de
-            jogo.
+            Demonstração de diferentes formas de se desenvolver mecânicas de jogo.
           </li>
         </ol>
       </div>
       <div className="warning">
         <p>
-          Esse jogo <strong>não</strong> possui suporte para celular
+          Esse jogo <strong>não</strong> possui suporte para celular.
         </p>
       </div>
     </aside>

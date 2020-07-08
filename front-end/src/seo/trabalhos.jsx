@@ -13,13 +13,13 @@ export default function TrabalhosSEO() {
       <meta name="robots" content="index,follow"/>
 
       {/* Google+ / Schema.org */}
-      <meta itemprop="name" content="Diego Matos | Trabalhos"/>
+      <meta itemprop="name" content="Trabalhos | Desenvolvedor Diego Matos"/>
       <meta itemprop="description" content="Página de visualização de todos os trabalhos do desenvolvedor Diego Matos."/>
       <meta itemprop="image" content={metaImagem}/>
       {/* <link href="https://plus.google.com/+SuaPagina" rel="publisher"/> */}
 
       {/* Open Graph Facebook */}
-      <meta property="og:title" content="Diego Matos | Trabalhos"/>
+      <meta property="og:title" content="Trabalhos | Desenvolvedor Diego Matos"/>
       <meta property="og:description" content="Página de visualização de todos os trabalhos do desenvolvedor Diego Matos."/>
       <meta property="og:url" content="https://devdiegomatos.com.br/trabalhos"/>
       <meta property="og:site_name" content="Portfolio do desenvolvedor Diego Matos"/>
@@ -29,7 +29,7 @@ export default function TrabalhosSEO() {
       <meta property="og:locale" content="pt-BR"/>
 
       {/* Twitter */}
-      <meta name="twitter:title" content="Diego Matos | Trabalhos"/>
+      <meta name="twitter:title" content="Trabalhos | Desenvolvedor Diego Matos"/>
       <meta name="twitter:description" content="Página de visualização de todos os trabalhos do desenvolvedor Diego Matos."/>
       <meta name="twitter:url" content="https://devdiegomatos.com.br/trabalhos"/>
       <meta name="twitter:card" content="summary"/>
