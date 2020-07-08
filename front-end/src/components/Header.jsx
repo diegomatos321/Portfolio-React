@@ -17,7 +17,10 @@ export default function Header() {
           </li>
 
           <li className="nav-item item-about">
-            <a href="/#about">Sobre Mim</a>
+            <Link to={{
+              pathname:"/",
+              hash:"#about"
+            }}>Sobre Mim</Link>
           </li>
 
           <ul className="nav-item sub-nav item-trabalhos">
