@@ -10,10 +10,7 @@ export default class Novo extends Component {
       tipo: "Raça",
       descricao: "",
       idiomas: [],
-      proficiencias: {
-        ganha: [],
-        escolhe: []
-      }
+      proficiencias: [],
     };
   }
 
@@ -65,26 +62,28 @@ export default class Novo extends Component {
       });
     }
 
-    if(formulario.id === "formulario-proficiencias"){
-      this.setState(prevState =>{
-        let proficiencias = prevState.proficiencias;
-        let opcoesAnteriores = proficiencias[body.opcao].map(opcao => opcao);
-        let novaOpcao = {
+    if (formulario.id === "formulario-proficiencias") {
+      this.setState((prevState) => {
+        let novaProficiencia = [];
+        novaProficiencia = prevState.proficiencias.map(
+          (proficiencia) => proficiencia
+        );
+
+        novaProficiencia.push({
           nome: body.nome,
-          tipo: body.tipo
-        }
-        // opcoesAnteriores.push(novaOpcao);
-        proficiencias[body.opcao] = opcoesAnteriores.push(novaOpcao);
+          tipo: body.tipo,
+          opcao: body.opcao,
+        });
         return {
-          proficiencias
-        }
-      })
+          proficiencias: novaProficiencia,
+        };
+      });
     }
   };
 
   render() {
     let { idiomas, proficiencias } = this.state;
-    let idiomasComponents = idiomas.map((idioma) => {
+    let idiomasComponentes = idiomas.map((idioma) => {
       return (
         <div key={idioma} className="panel-item">
           <p>{idioma}</p>
@@ -94,16 +93,38 @@ export default class Novo extends Component {
       );
     });
 
-    let proficienciasComponents = proficiencias.ganha.map(proficiencia => {
+    let proficienciasComponentes = proficiencias.map((proficiencia) => {
       return (
-        <div key={proficiencia.nome}>
-          <button className="accordion">Ganha {proficiencia.nome}</button>
-          <div className="panel">
-            <p>Tipo: {proficiencia.tipo}</p>
+        <div
+          className="panel-item"
+          style={{ padding: "0" }}
+          key={proficiencia.nome}
+        >
+          <button className="accordion" onClick={this.handleAccordion}>
+            {proficiencia.nome}
+          </button>
+          <div style={{ backgroundColor: "#eee" }} className="panel">
+            <ul>
+              <li>Tipo: {proficiencia.tipo}</li>
+              <li>Opcao: {proficiencia.opcao}</li>
+            </ul>
           </div>
         </div>
+      );
+    });
+
+    let ModificadoresComponents = this.state.modificadores.map(modificador => {
+      return(
+        <div key={modificador.nome}>
+          <label htmlFor="nome">Nome: </label>
+          <input id="nome" name="nome" required maxLength="50" type="text"/>
+          <br/>
+          <label htmlFor="bonus">Bônus</label>
+          <input id="bonus" name="nome" required maxLength="50" type="text"/>
+        </div>                 
       )
     })
+
     return (
       <div className="main plataforma-dashboard-container">
         <div className="title">
@@ -163,7 +184,10 @@ export default class Novo extends Component {
                 Idiomas
               </button>
               <div className="panel idiomas">
-                <form id="formulario-idiomas" onSubmit={this.handleAdicionarItem}>
+                <form
+                  id="formulario-idiomas"
+                  onSubmit={this.handleAdicionarItem}
+                >
                   <fieldset>
                     <legend>Idioma</legend>
                     <select name="idioma">
@@ -174,21 +198,27 @@ export default class Novo extends Component {
                     <button>+</button>
                   </fieldset>
                 </form>
-                {idiomasComponents}
+                {idiomasComponentes}
               </div>
             </div>
-            
+
             <div>
               <button className="accordion" onClick={this.handleAccordion}>
                 Proficiências
               </button>
               <div className="panel proficiencias">
-                <form id="formulario-proficiencias" className="formulario-proficiencia" onSubmit={this.handleAdicionarItem}>
+                <form
+                  id="formulario-proficiencias"
+                  className="formulario-proficiencia"
+                  onSubmit={this.handleAdicionarItem}
+                >
                   <fieldset>
                     <legend>Proficiências</legend>
                     <input
                       name="nome"
                       placeholder="Ex: Machados de Batalha"
+                      required
+                      maxLength="50"
                       type="text"
                     />
                     <br />
@@ -198,31 +228,75 @@ export default class Novo extends Component {
                       id="ganha"
                       name="opcao"
                       type="radio"
-                      value="ganha"
+                      value="Ganha"
+                      required
                     />
 
-                    <label htmlFor="escolhe">Escolhe</label>
+                    <label htmlFor="Escolhe">Escolhe</label>
                     <input
                       id="escolhe"
                       name="opcao"
                       type="radio"
-                      value="escolhe"
+                      value="Escolhe"
+                      required
                     />
                     <br />
                     <label htmlFor="tipo">Tipo: </label>
-                    <select name="tipo">
+                    <select name="tipo" required>
                       <option value="Arma">Arma</option>
                       <option value="Armadura">Armadura</option>
                       <option value="Ferramentas">Ferramentas</option>
                     </select>
-                    <br/>
+                    <br />
                     <button>+</button>
                   </fieldset>
                 </form>
-                {proficienciasComponents}
+                {proficienciasComponentes}
               </div>
             </div>
 
+            <div>
+              <button className="accordion" onClick={this.handleAccordion}>
+                Traços Raciais
+              </button>
+              <div className="panel tracos-raciais">
+                <form>
+                  <fieldset>
+                    <legend>Traços Raciais</legend>
+                    <label htmlFor="nome">Nome: </label>
+                    <input
+                      id="nome"
+                      name="nome"
+                      type="text"
+                      required
+                      maxLength="50"
+                    />
+                    <br />
+                    <label htmlFor="descricao">Descrição: </label>
+                    {/* <textarea name="descricao" id="descricao" cols="30" rows="10" required spellCheck maxLength="250"></textarea> */}
+                    <Editor
+                      initialValue="<p>Descreva o traço racial</p>"
+                      init={{
+                        height: 500,
+                        menubar: "file edit view insert format",
+                        plugins: [
+                          "advlist autolink lists link charmap preview searchreplace visualblocks code fullscreen help wordcount autoresize",
+                        ],
+                        toolbar:
+                          "undo redo | formatselect | bold italic backcolor | \
+                          alignleft aligncenter alignright alignjustify | \
+                          bullist numlist outdent indent | removeformat | help",
+                        max_height: 400,
+                      }}
+                    />
+                  </fieldset>
+                  <fieldset>
+                    <legend>Modificadores: </legend>
+                    {ModificadoresComponentes}
+                  </fieldset>
+                </form>
+              </div>
+            </div>
           </div>
         </aside>
 

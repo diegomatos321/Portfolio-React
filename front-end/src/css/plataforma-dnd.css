@@ -47,6 +47,7 @@
   display:grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
+  justify-items: center;
   row-gap: 0.5em;
 }
 
@@ -55,17 +56,40 @@
   background-color: white;
   max-height: 0px;
   opacity: 0;
+  /* pointer-events: none; */
   overflow: hidden;
   transition: all 150ms;
 }
 
-.panel-item{
+.panel-active{
+  padding: 0.5em;
+  max-height: none;
+  pointer-events: auto;
+  opacity: 1;
+  overflow: auto;
+}
+
+.panel form{
   width: 100%;
+}
+
+.panel-item{
+  width: 80%;
   background-color: #eee;
   color: #444;
+  text-align: center;
   padding: 0.5em;
   animation-name: aparecer;
   animation-duration: 150ms;
+}
+
+.panel-item ul{
+  list-style-position: inside;
+  text-align: left;
+}
+
+.panel-item p, .panel-item li{
+  font-size: 1rem;
 }
 
 @keyframes aparecer{
@@ -75,10 +99,4 @@
   100%{
     opacity: 1;
   }
-}
-
-.panel-active{
-  padding: 0.5em;
-  max-height: 200px;
-  opacity: 1;
 }
