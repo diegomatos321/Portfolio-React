@@ -11,6 +11,8 @@ export default class Novo extends Component {
       descricao: "",
       idiomas: [],
       proficiencias: [],
+      modificadoresTemporarios: [],
+      quantidadeModificadoresTemp: 0
     };
   }
 
@@ -81,6 +83,44 @@ export default class Novo extends Component {
     }
   };
 
+  handleAdicionarModificadorTemp = (e) =>{
+    e.preventDefault();
+    this.setState(prevState =>{
+      let novoEstado = prevState.modificadoresTemporarios.map(modificadorTemp => modificadorTemp);
+      let id = prevState.quantidadeModificadoresTemp + 1;
+      novoEstado.push({id});
+      return {
+        modificadoresTemporarios: novoEstado,
+        quantidadeModificadoresTemp: id
+      }
+    })
+  }
+
+  handleRemoverModificadorTemp = (e) =>{
+    e.preventDefault();
+    let id = Number(e.currentTarget.getAttribute("data-id"))
+    this.setState(prevState => {
+      let novoEstado = prevState.modificadoresTemporarios.filter(modificadorTemp => modificadorTemp.id !== id);
+      return{
+        modificadoresTemporarios: novoEstado
+      }
+    })
+  }
+
+  handleAdicionarModificador = (e) =>{
+    e.preventDefault();
+    let body = {};
+    let formData = new FormData(e.target);
+    formData.forEach((value, key) =>{
+      if(key === "habilidade" && value){
+        body[key] = true;
+        return
+      }
+      body[key] = value;
+    })
+    console.log(body)
+  }
+
   render() {
     let { idiomas, proficiencias } = this.state;
     let idiomasComponentes = idiomas.map((idioma) => {
@@ -113,14 +153,16 @@ export default class Novo extends Component {
       );
     });
 
-    let ModificadoresComponents = this.state.modificadores.map(modificador => {
+    let ModificadoresTempComponentes = this.state.modificadoresTemporarios.map(modificadorTemp => {
       return(
-        <div key={modificador.nome}>
-          <label htmlFor="nome">Nome: </label>
-          <input id="nome" name="nome" required maxLength="50" type="text"/>
+        <div key={modificadorTemp.id}>
+          <label htmlFor="nomeModificador">Nome: </label>
+          <input id="nomeModificador" name="nomeModificador" required maxLength="50" placeholder="Ex: Defesa sem armadura" type="text"/>
           <br/>
-          <label htmlFor="bonus">Bônus</label>
-          <input id="bonus" name="nome" required maxLength="50" type="text"/>
+          <label htmlFor="bonus">Bônus: </label>
+          <input id="bonus" name="bonus" required maxLength="50" placeholder="Ex: 10, +DES, +SAB" type="text"/>
+          <br/>
+          <button data-id={modificadorTemp.id} onClick={this.handleRemoverModificadorTemp}>Remover</button>
         </div>                 
       )
     })
@@ -133,9 +175,9 @@ export default class Novo extends Component {
         </div>
         <aside className="aside">
           <div className="container-dados-personagem">
-            <label htmlFor="nome">Nome: </label>
+            <label htmlFor="nomeRaca">Nome: </label>
             <input
-              id="nome"
+              id="nomeRaca"
               name="nome"
               placeholder="Ex: Alto Elfo"
               type="text"
@@ -260,40 +302,32 @@ export default class Novo extends Component {
                 Traços Raciais
               </button>
               <div className="panel tracos-raciais">
-                <form>
+                <form onSubmit={this.handleAdicionarModificador}>
                   <fieldset>
                     <legend>Traços Raciais</legend>
-                    <label htmlFor="nome">Nome: </label>
+                    <label htmlFor="nomeTracoRacial">Nome: </label>
                     <input
-                      id="nome"
-                      name="nome"
+                      id="nomeTracoRacial"
+                      name="nomeTracoRacial"
                       type="text"
                       required
                       maxLength="50"
                     />
                     <br />
                     <label htmlFor="descricao">Descrição: </label>
-                    {/* <textarea name="descricao" id="descricao" cols="30" rows="10" required spellCheck maxLength="250"></textarea> */}
-                    <Editor
-                      initialValue="<p>Descreva o traço racial</p>"
-                      init={{
-                        height: 500,
-                        menubar: "file edit view insert format",
-                        plugins: [
-                          "advlist autolink lists link charmap preview searchreplace visualblocks code fullscreen help wordcount autoresize",
-                        ],
-                        toolbar:
-                          "undo redo | formatselect | bold italic backcolor | \
-                          alignleft aligncenter alignright alignjustify | \
-                          bullist numlist outdent indent | removeformat | help",
-                        max_height: 400,
-                      }}
-                    />
+                    <br/>
+                    <textarea name="descricao" id="descricao" cols="30" rows="10" required spellCheck maxLength="250"></textarea>
+                    <br/>
+                    <label htmlFor="habilidade">É uma Habilidade ? </label>
+                    <input type="checkbox" name="habilidade" id="habilidade" value="sim"/>
                   </fieldset>
                   <fieldset>
                     <legend>Modificadores: </legend>
-                    {ModificadoresComponentes}
+                    <button onClick={this.handleAdicionarModificadorTemp}>+</button>
+                    <br/>
+                    {ModificadoresTempComponentes}
                   </fieldset>
+                  <button>Confirmar</button>
                 </form>
               </div>
             </div>
