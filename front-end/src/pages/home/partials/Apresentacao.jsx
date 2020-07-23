@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import FotoDePerfil from "../../../uploads/imagens/foto-perfil.webp"
-import Curriculum from "../../../uploads/documentos/curriculum.docx"
+import Curriculo from "../../../uploads/documentos/curriculo.pdf"
 
 export default class Apresentacao extends Component {
   render() {
@@ -72,8 +72,8 @@ export default class Apresentacao extends Component {
           <div className="buttons flex-container">
             <a
               className="flex-item btn"
-              href={Curriculum}
-              download
+              href={Curriculo}
+              target="_blank"
             >
               Baixe o meu curriculum
             </a>
