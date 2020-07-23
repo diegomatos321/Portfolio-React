@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.98c0ce8f.chunk.css",
-    "main.js": "/static/js/main.de4583ac.chunk.js",
-    "main.js.map": "/static/js/main.de4583ac.chunk.js.map",
+    "main.js": "/static/js/main.53938e0a.chunk.js",
+    "main.js.map": "/static/js/main.53938e0a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.94fc3a04.js",
     "runtime-main.js.map": "/static/js/runtime-main.94fc3a04.js.map",
     "static/js/2.62fa6646.chunk.js": "/static/js/2.62fa6646.chunk.js",
     "static/js/2.62fa6646.chunk.js.map": "/static/js/2.62fa6646.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.6ddd60695b72c8dfa3b23432615465fc.js": "/precache-manifest.6ddd60695b72c8dfa3b23432615465fc.js",
+    "precache-manifest.148900fab82903dbaa3accf28e19f818.js": "/precache-manifest.148900fab82903dbaa3accf28e19f818.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.98c0ce8f.chunk.css.map": "/static/css/main.98c0ce8f.chunk.css.map",
     "static/js/2.62fa6646.chunk.js.LICENSE.txt": "/static/js/2.62fa6646.chunk.js.LICENSE.txt",
     "static/media/asteroides.webp": "/static/media/asteroides.039923f6.webp",
     "static/media/index.css": "/static/media/web-development-banner.ea4a7a48.webp",
-    "static/media/curriculum.docx": "/static/media/curriculum.d41d8cd9.docx",
+    "static/media/curriculo.pdf": "/static/media/curriculo.b22df36a.pdf",
     "static/media/flappybird.webp": "/static/media/flappybird.032aa79b.webp",
     "static/media/foto-perfil.webp": "/static/media/foto-perfil.6ea652b2.webp",
     "static/media/jogo-da-nave.webp": "/static/media/jogo-da-nave.c4887105.webp",
@@ -25,6 +25,6 @@
     "static/js/runtime-main.94fc3a04.js",
     "static/js/2.62fa6646.chunk.js",
     "static/css/main.98c0ce8f.chunk.css",
-    "static/js/main.de4583ac.chunk.js"
+    "static/js/main.53938e0a.chunk.js"
   ]
 }
