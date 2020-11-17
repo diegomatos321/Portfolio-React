@@ -12,7 +12,7 @@ const helmet = require('helmet');
 const app = express();
 
 // MIDDLEWARES
-app.use(helmet());
+// app.use(helmet());
 
 // Redirecionamento HTTPS da Umbler
 app.use((req, res, next) => { //Cria um middleware onde todas as requests passam por ele 
@@ -42,10 +42,9 @@ app.use(express.static(path.join(__dirname, "build")));
 app.use("/trabalhos", trabalhosRouter);
 app.use("/contato", contatoRouter);
 
-app.get("*", (req, res) => {
+/* app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "build", "index.html"));
-});
-
+}); */
 
 app.listen(process.env.PORT || 3000, () => {
     console.log("Servidor Ligado !")
