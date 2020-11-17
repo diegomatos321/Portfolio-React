@@ -12,7 +12,7 @@ const helmet = require('helmet');
 const app = express();
 
 // MIDDLEWARES
-// app.use(helmet());
+app.use(helmet());
 
 // Redirecionamento HTTPS da Umbler
 app.use((req, res, next) => { //Cria um middleware onde todas as requests passam por ele 
