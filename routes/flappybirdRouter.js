@@ -2,8 +2,7 @@ const flappybirdRouter = require("express").Router();
 const Jogador = require("../models/jogador.js");
 const { body, validationResult } = require('express-validator');
 
-// GET ALL PLAYERS
-flappybirdRouter.get("/jogadores/:quantidade", async (req, res) => {
+flappybirdRouter.get("/jogadores/:quantidade", async function pesquisarJogadores (req, res) {
   const quantidade = Number(req.params.quantidade);
   try {
     let jogadores;
@@ -17,19 +16,18 @@ flappybirdRouter.get("/jogadores/:quantidade", async (req, res) => {
       res.status(201).json(jogadores);
       return;
     }
-    res.status(400).json({ message: "Não há jogadores cadastrados" }); // TODO: VERIFICAR HEADER
+    res.status(200).json({ message: "Não há jogadores cadastrados" }); // TODO: VERIFICAR HEADER
   } catch (error) {
-    res.status(404).json({ message: error });
+    res.status(500).json({ message: error });
   }
 });
 
-// SAVE NEW PLAYER
 flappybirdRouter.post("/", [
   body("nome").isLength({ min: 3, max: 10 }).withMessage("Campo nome deve ter entre 3 à 10 caracteres"),
-],async (req, res) => {
+], async function loginJogador (req, res) {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    return res.status(400).json(errors.array())
+    return res.status(404).json(errors.array())
   }
 
   try {
@@ -46,18 +44,17 @@ flappybirdRouter.post("/", [
 
       res.status(201).json(jogadorSalvo);
     } else {
-      res.status(404).json(jogador);
+      res.status(200).json(jogador);
       return;
     }
   } catch (error) {
-    res.status(404).json({ message: error });
+    res.status(500).json({ message: error });
   }
 });
 
-// UPDATE PLAYER
-flappybirdRouter.patch("/editar", async (req, res) => {
+flappybirdRouter.patch("/editar", async function atualizarJogador (req, res) {
   if (!req.body) {
-    return res.status(400).send("Body Vazio");
+    return res.status(404).send("Body Vazio");
   }
 
   try {
