@@ -30,17 +30,22 @@ contatoRouter.post("/", [
 
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
-      service: 'SendGrid',
+      host: process.env.SMTP,
+      port: 587,
+      secure: false, // true for 465, false for other ports
       auth: {
-        user: process.env.SERVICELOGIN,
-        pass: process.env.SERVICEPASSWORD,
+        user: process.env.EMAILLOGIN,
+        pass: process.env.EMAILPASSWORD,
+      },
+      tls: {
+        rejectUnauthorized: true
       }
     });
 
     // send mail with defined transport object
     const info = await transporter.sendMail({
-      from: `Portfolio`, // sender address
-      to: `${process.env.EMAILRECEIVER1}`, // list of receivers
+      from: `Portfolio <${process.env.EMAILLOGIN}>`, // sender address
+      to: `${process.env.EMAILRECEIVER2}`, // list of receivers
       subject: assunto, // Subject line
       text: "E-mail enviado pelo Portfolio", // plain text body
       html: output, // html body
