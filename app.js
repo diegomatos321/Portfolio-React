@@ -5,31 +5,35 @@ if(process.env.NODE_ENV !== "production"){
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
-
 // APP
 const app = express();
 
 // MIDDLEWARES
-app.use(helmet());
+/* app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+); */
 
-// Redirecionamento HTTPS da Umbler
+/*
+Redirecionamento HTTPS da Umbler
 app.use((req, res, next) => { //Cria um middleware onde todas as requests passam por ele 
     if (req.headers["x-forwarded-proto"] == "http") //Checa se o protocolo informado nos headers é HTTP 
         res.redirect(`https://${req.headers.host}${req.url}`); //Redireciona pra HTTPS 
     else //Se a requisição já é HTTPS 
         next(); //Não precisa redirecionar, passa para os próximos middlewares que servirão com o conteúdo desejado 
 });
+*/
 
-app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // DATA BASE
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
-.then(() => console.log("Conectado a base de dados"))
-.catch(error => console.log("Erro a conectador ao bando de dados: ", error))
+
+mongoose.connection.on('error', error => console.log("Ocorreu um erro ao conectar na base de dados: ", error));
+mongoose.connection.once('open', () => console.log("Conectado na base de dados"));
 
 // ROUTES
 const trabalhosRouter = require("./routes/trabalhosRouter");
