@@ -1,30 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.98c0ce8f.chunk.css",
-    "main.js": "/static/js/main.152f4f24.chunk.js",
-    "main.js.map": "/static/js/main.152f4f24.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.94fc3a04.js",
-    "runtime-main.js.map": "/static/js/runtime-main.94fc3a04.js.map",
-    "static/js/2.62fa6646.chunk.js": "/static/js/2.62fa6646.chunk.js",
-    "static/js/2.62fa6646.chunk.js.map": "/static/js/2.62fa6646.chunk.js.map",
+    "main.css": "/static/css/main.aec07f7e.chunk.css",
+    "main.js": "/static/js/main.27156d61.chunk.js",
+    "main.js.map": "/static/js/main.27156d61.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fb07ad15.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fb07ad15.js.map",
+    "static/js/2.36280d54.chunk.js": "/static/js/2.36280d54.chunk.js",
+    "static/js/2.36280d54.chunk.js.map": "/static/js/2.36280d54.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.3844ca0d221f8abd33947258bb2874c8.js": "/precache-manifest.3844ca0d221f8abd33947258bb2874c8.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.98c0ce8f.chunk.css.map": "/static/css/main.98c0ce8f.chunk.css.map",
-    "static/js/2.62fa6646.chunk.js.LICENSE.txt": "/static/js/2.62fa6646.chunk.js.LICENSE.txt",
-    "static/media/asteroides.webp": "/static/media/asteroides.039923f6.webp",
-    "static/media/index.css": "/static/media/web-development-banner.ea4a7a48.webp",
-    "static/media/curriculo.pdf": "/static/media/curriculo.b22df36a.pdf",
-    "static/media/flappybird.webp": "/static/media/flappybird.032aa79b.webp",
-    "static/media/foto-perfil.webp": "/static/media/foto-perfil.6ea652b2.webp",
-    "static/media/jogo-da-nave.webp": "/static/media/jogo-da-nave.c4887105.webp",
-    "static/media/logo.webp": "/static/media/logo.58e77cb7.webp",
-    "static/media/super-mario.webp": "/static/media/super-mario.04d3f21d.webp"
+    "static/css/main.aec07f7e.chunk.css.map": "/static/css/main.aec07f7e.chunk.css.map",
+    "static/js/2.36280d54.chunk.js.LICENSE.txt": "/static/js/2.36280d54.chunk.js.LICENSE.txt",
+    "static/media/asteroides.3e05c5bf.webp": "/static/media/asteroides.3e05c5bf.webp",
+    "static/media/index.css": "/static/media/web-development-banner.24d33954.webp",
+    "static/media/curriculo.c28ae720.pdf": "/static/media/curriculo.c28ae720.pdf",
+    "static/media/flappybird.f43982db.webp": "/static/media/flappybird.f43982db.webp",
+    "static/media/foto-perfil.11d3fac7.webp": "/static/media/foto-perfil.11d3fac7.webp",
+    "static/media/jogo-da-nave.2c098029.webp": "/static/media/jogo-da-nave.2c098029.webp",
+    "static/media/logo.640e3046.webp": "/static/media/logo.640e3046.webp",
+    "static/media/super-mario.ca23112b.webp": "/static/media/super-mario.ca23112b.webp"
   },
   "entrypoints": [
-    "static/js/runtime-main.94fc3a04.js",
-    "static/js/2.62fa6646.chunk.js",
-    "static/css/main.98c0ce8f.chunk.css",
-    "static/js/main.152f4f24.chunk.js"
+    "static/js/runtime-main.fb07ad15.js",
+    "static/js/2.36280d54.chunk.js",
+    "static/css/main.aec07f7e.chunk.css",
+    "static/js/main.27156d61.chunk.js"
   ]
 }

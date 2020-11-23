@@ -5,14 +5,16 @@ if(process.env.NODE_ENV !== "production"){
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
-
 // APP
 const app = express();
 
 // MIDDLEWARES
-// app.use(helmet());
+/* app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+); */
 
 /*
 Redirecionamento HTTPS da Umbler
@@ -24,7 +26,6 @@ app.use((req, res, next) => { //Cria um middleware onde todas as requests passam
 });
 */
 
-app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
