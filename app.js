@@ -22,7 +22,7 @@ app.use((req, res, next) => { //Cria um middleware onde todas as requests passam
         next(); //Não precisa redirecionar, passa para os próximos middlewares que servirão com o conteúdo desejado 
 });
 
-// app.use(cookieParser());
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -36,7 +36,7 @@ const trabalhosRouter = require("./routes/trabalhosRouter");
 const contatoRouter = require("./routes/contatoRouter");
 
 // Arquivos
-// app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, "build")));
 
 // ROTAS
 app.use("/trabalhos", trabalhosRouter);
