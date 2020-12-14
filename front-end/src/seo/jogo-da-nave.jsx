@@ -1,6 +1,8 @@
 import React from 'react'
 import {Helmet} from "react-helmet"
-import metaImagem from "../uploads/imagens/jogo-da-nave.webp"
+// import metaImagem from "../uploads/imagens/jogo-da-nave.webp"
+import { jogoDaNave } from "../asset-pack.json"
+const metaImagem = jogoDaNave.png
 
 export default function JogoDaNaveSEO() {
   return (

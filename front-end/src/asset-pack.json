@@ -1,0 +1,43 @@
+{
+    "flappyBird": {
+        "png": "/assets/imagens/flappybird.png",
+        "webp": "assets/imagens/flappybird.webp"
+    },
+    "jogoDaNave": {
+        "png": "/assets/imagens/jogo-da-nave.png",
+        "webp": "/assets/imagens/jogo-da-nave.webp"
+    },
+    "superMario": {
+        "png": "/assets/imagens/super-mario.png",
+        "webp": "/assets/imagens/super-mario.webp"
+    },
+    "jogoAsteroides": {
+        "png": "/assets/imagens/asteroides.png",
+        "webp": "/assets/imagens/asteroides.webp"
+    },
+    "contatoBanner": {
+        "png": "/assets/imagens/contato-banner.png",
+        "webp": "/assets/imagens/contato-banner.webp"
+    },
+    "logo": {
+        "png": "/assets/imagens/logo.png",
+        "webp": "/assets/imagens/logo.webp"
+    },
+    "technologyAboutMe": {
+        "png": "/assets/imagens/technology-about-me.png",
+        "webp": "/assets/imagens/technology-about-me.webp"
+    },
+    "webDevelopmentBanner": {
+        "png": "/assets/imagens/web-development-banner.png",
+        "webp": "/assets/imagens/web-development-banner.webp"
+    },
+    "webDevelopmentBanner1": {
+        "png": "/assets/imagens/web-development-banner1.png",
+        "webp": "/assets/imagens/web-development-banner1.webp"
+    },
+    "curriculo": "/assets/documentos/curriculo.pdf",
+    "fotoDePerfil": {
+        "png": "/assets/imagens/foto-perfil.png",
+        "webp":"/assets/imagens/foto-perfil.webp"
+    }
+}

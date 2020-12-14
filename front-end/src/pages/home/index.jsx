@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import { useEffect } from 'react'
+import { useLocation } from "react-router-dom"
 
 import MetaDados from "../../seo/home"
 
@@ -7,12 +8,10 @@ import Sobre from "./partials/Sobre"
 import TodosTrabalhos from "./partials/TrabalhosHome"
 import Contato from "./partials/Contato"
 
-export default class Home extends Component {
-  constructor(props){
-    super(props)
-  }
-  componentDidMount(){
-    let {hash} = this.props.location;
+export default function Home (){
+  let { hash } = useLocation();
+
+  useEffect(function scrollToComponentId() {
     if(hash){
       hash = hash.split("#")[1];
       let element = document.getElementById(hash);
@@ -20,8 +19,7 @@ export default class Home extends Component {
       return
     }
     window.scrollTo(0, 0);
-  }
-  render() {
+  }, [hash])
     return (
       <>
         <MetaDados/>
@@ -33,5 +31,4 @@ export default class Home extends Component {
         </main>
       </>
     )
-  }
 }

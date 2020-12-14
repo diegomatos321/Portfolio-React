@@ -1,15 +1,14 @@
-import React, { Component } from 'react'
+import { useEffect } from "react"
 
 import MetaDados from "../../seo/trabalhos"
 import TodosTrabalhos from "../../components/TodosTrabalhos"
 import "../../css/trabalhos.css"
 
-export default class trabalhos extends Component {
-  componentDidMount(){
+export default function Trabalhos() {
+  useEffect(function scrollToTop() {
     window.scrollTo(0, 0);
-  }
+  }, [])
 
-  render() {
     return (
       <>
         <MetaDados/>
@@ -24,5 +23,4 @@ export default class trabalhos extends Component {
         </main>
       </>
     )
-  }
 }

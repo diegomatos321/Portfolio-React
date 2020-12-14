@@ -1,6 +1,8 @@
 import React from 'react'
 import {Helmet} from "react-helmet"
-import imagemMeta from "../uploads/imagens/asteroides.webp"
+// import metaImagem from "../uploads/imagens/asteroides.webp"
+import { jogoAsteroides } from "../asset-pack.json"
+const metaImagem = jogoAsteroides.png
 
 export default function FlappyBirdSEO() {
   return (
@@ -15,7 +17,7 @@ export default function FlappyBirdSEO() {
           {/* Google+ / Schema.org */}
           <meta itemprop="name" content="Asteroides | Desenvolvedor Diego Matos"/>
           <meta itemprop="description" content="Avalie um dos trabalhos feito por Diego Matos com os alunos, o desenvolvimento de um jogo baseado no clássico jogo Asteroides."/>
-          <meta itemprop="image" content={imagemMeta}/>
+          <meta itemprop="image" content={metaImagem}/>
           {/* <link href="https://plus.google.com/+SuaPagina" rel="publisher"/> */}
 
           {/* Open Graph Facebook */}
@@ -24,7 +26,7 @@ export default function FlappyBirdSEO() {
           <meta property="og:url" content="https://devdiegomatos.com.br/trabalhos/jogo-asteroides"/>
           <meta property="og:site_name" content="Portfolio do desenvolvedor Diego Matos"/>
           <meta property="og:type" content="website"/>
-          <meta property="og:image" content={imagemMeta}/>
+          <meta property="og:image" content={metaImagem}/>
           <meta property="og:image:alt" content="Foto do jogo Asteroides"/>
           <meta property="og:locale" content="pt-BR"/>
 
@@ -33,7 +35,7 @@ export default function FlappyBirdSEO() {
           <meta name="twitter:description" content="Avalie um dos trabalhos feito por Diego Matos com os alunos, o desenvolvimento de um jogo baseado no clássico jogo Asteroides."/>
           <meta name="twitter:url" content="https://devdiegomatos.com.br/trabalhos/jogo-asteroides"/>
           <meta name="twitter:card" content="summary"/>
-          <meta name="twitter:image" content={imagemMeta}/>
+          <meta name="twitter:image" content={metaImagem}/>
           {/* <meta name="twitter:creator" content="@estevanmaito"/> */}
           {/* <meta name="twitter:site" content="@empresa"/> */}
     </Helmet>

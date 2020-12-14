@@ -14,7 +14,7 @@ section:last-child .container {
 
 .container-apresentacao {
   background-color: rgba(0, 0, 0, 0.8);
-  background-image: url("../uploads/imagens/web-development-banner.webp");
+  background-image: url("http://localhost:3000/assets/imagens/web-development-banner.png");
   background-size: cover;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
@@ -99,7 +99,7 @@ section:last-child .container {
 
 .container-contato {
   background-color: rgba(0, 0, 0, 0.8);
-  background-image: url("../uploads/imagens/contato-banner.webp");
+  background-image: url("http://localhost:3000/assets/imagens/contato-banner.png");
   background-size: cover;
   background-blend-mode: multiply;
   background-repeat: no-repeat;

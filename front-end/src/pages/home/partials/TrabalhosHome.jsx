@@ -1,4 +1,3 @@
-import React from "react";
 import Trabalhos from "../../../components/TodosTrabalhos"
 
 export default function TrabalhosHome() {

@@ -1,13 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../uploads/imagens/logo.webp";
+// import Logo from "../uploads/imagens/logo.webp";
+import { logo } from "../asset-pack.json"
 
 export default function Header() {
   return (
     <header id="header" className="header">
       <figure className="img logo">
         <Link to="/">
-          <img src={Logo} alt="Logo do site" title="Logo do Site" />
+          <figure>
+            <source src={logo.webp} type="image/webp"/>
+            <img src={logo.png} alt="Logo do site" title="Logo do Site" />
+          </figure>
         </Link>
       </figure>
       <nav className="main-nav">

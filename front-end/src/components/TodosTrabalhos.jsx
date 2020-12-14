@@ -2,10 +2,13 @@ import React, { Component } from "react";
 import {Link} from "react-router-dom";
 import Masonry from "../utils/mansory-custom";
 
-import flappyBirdImagem from "../uploads/imagens/flappybird.webp";
+/* import flappyBirdImagem from "../uploads/imagens/flappybird.webp";
 import jogoDaNaveImagem from "../uploads/imagens/jogo-da-nave.webp";
 import superMarioImagem from "../uploads/imagens/super-mario.webp";
 import jogoAsteroidesImagem from "../uploads/imagens/asteroides.webp";
+ */
+
+import { flappyBird, jogoDaNave, jogoAsteroides, superMario } from "../asset-pack.json"
 
 export default class Trabalhos extends Component {
   constructor(props){
@@ -34,10 +37,11 @@ export default class Trabalhos extends Component {
         <Link to= "/trabalhos/flappybird" className="mansory-item">
           <article>
             <figure>
+              <source src={flappyBird.webp} type="image/webp"/>
               <img
                 className="img"
                 id="flappybird"
-                src={flappyBirdImagem}
+                src={flappyBird.png}
                 alt="Imagem do jogo FlappyBird"
                 title="Imagem do jogo FlappyBird"
                 onLoad={this.imageHandler}
@@ -52,10 +56,11 @@ export default class Trabalhos extends Component {
         <Link to="/trabalhos/jogo-da-nave" className="mansory-item">
           <article>
             <figure>
+              <source src={jogoDaNave.webp} type="image/webp"/>
               <img
                 className="img"
                 id="jogoDaNave"
-                src={jogoDaNaveImagem}
+                src={jogoDaNave.png}
                 alt="Imagem do jogo da Nave"
                 title="Imagem do jogo da Nave"
                 onLoad={this.imageHandler}
@@ -69,10 +74,11 @@ export default class Trabalhos extends Component {
         <Link to="/trabalhos/super-mario" className="mansory-item">
           <article>
             <figure>
+              <source src={superMario.webp} type="image/webp"/>
               <img
                 className="img"
                 id="superMario"
-                src={superMarioImagem}
+                src={superMario.png}
                 alt="Imagem do jogo do Super Mario Bros"
                 title="Imagem do jogo do Super Mario Bros"
                 onLoad={this.imageHandler}
@@ -86,10 +92,11 @@ export default class Trabalhos extends Component {
         <Link to="/trabalhos/jogo-asteroides" className="mansory-item">
           <article>
             <figure>
+              <source src={jogoAsteroides.webp} type="image/webp"/>
               <img
                 className="img"
                 id="jogoAsteroides"
-                src={jogoAsteroidesImagem}
+                src={jogoAsteroides.png}
                 alt="Imagem do jogo asteroides"
                 title="Imagem do jogo asteroides"
                 onLoad={this.imageHandler}

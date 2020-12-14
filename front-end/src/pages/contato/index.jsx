@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 
 import MetaDados from "../../seo/contato"
 import Mensagem from "../../components/Mensagem.jsx";

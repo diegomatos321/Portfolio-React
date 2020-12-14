@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import metaImagem from "../uploads/imagens/contato-banner.webp";
+// import metaImagem from "../uploads/imagens/contato-banner.webp";
+import { contatoBanner } from "../asset-pack.json"
+const metaImagem = contatoBanner.png
 
 export default function ContatoSEO() {
   return (

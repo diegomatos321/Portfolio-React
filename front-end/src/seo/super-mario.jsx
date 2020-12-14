@@ -1,6 +1,8 @@
 import React from 'react'
 import {Helmet} from "react-helmet"
-import metaImagem from "../uploads/imagens/super-mario.webp"
+// import metaImagem from "../uploads/imagens/super-mario.webp"
+import { superMario } from "../asset-pack.json"
+const metaImagem = superMario.png
 
 export default function SuperMarioSEO() {
   return (

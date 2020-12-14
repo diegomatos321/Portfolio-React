@@ -1,6 +1,8 @@
 import React from 'react'
 import {Helmet} from "react-helmet"
-import imagemMeta from "../uploads/imagens/flappybird.webp"
+// import imagemMeta from "../uploads/imagens/flappybird.webp"
+import { flappyBird } from "../asset-pack.json"
+const imagemMeta = flappyBird.png
 
 export default function FlappyBirdSEO() {
   return (

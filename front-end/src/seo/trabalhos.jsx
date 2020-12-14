@@ -1,6 +1,8 @@
 import React from 'react'
 import {Helmet} from "react-helmet"
-import metaImagem from "../uploads/imagens/foto-perfil.webp"
+// import metaImagem from "../uploads/imagens/foto-perfil.webp"
+import { fotoDePerfil } from "../asset-pack.json"
+const metaImagem = fotoDePerfil.png
 
 export default function TrabalhosSEO() {
   return (
