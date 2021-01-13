@@ -36,7 +36,7 @@ export default class Contato extends Component {
     });
 
     const data = await response.json();
-    console.log(data)
+    console.dir(data)
 
     this.setState({ 
       mensagem: data.mensagem 
@@ -47,7 +47,7 @@ export default class Contato extends Component {
     const { tipo, conteudo } = this.state.mensagem;
     const Mensagens = conteudo.map((value, index) => {
       if(tipo === "error"){
-        return <Mensagem key={index} tipo={tipo} conteudo={value.msg} />;
+        return <Mensagem key={index} tipo={tipo} conteudo={value} />;
       }
       return <Mensagem key={index} tipo={tipo} conteudo={value} />;
     });

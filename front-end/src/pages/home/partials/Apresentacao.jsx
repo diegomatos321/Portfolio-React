@@ -4,7 +4,7 @@ export default function Apresentacao() {
   return (
     <section id="home">
       <div className="container-apresentacao">
-        <h1>Desenvolvedor Full Stack</h1>
+        <h1>Desenvolvedor Web Full Stack</h1>
         <figure>
           <source src={fotoDePerfil.webp} type="image/webp" />
           <img src={fotoDePerfil.png} alt="Foto de Perfil" title="Foto de Perfil" />
@@ -72,6 +72,7 @@ export default function Apresentacao() {
             className="flex-item btn"
             href={curriculo}
             target="_blank"
+            rel="noreferrer"
           >
             Baixe o meu curriculum
             </a>

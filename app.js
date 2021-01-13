@@ -6,7 +6,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
 const helmet = require('helmet');
-// APP
 const app = express();
 
 // MIDDLEWARES
@@ -40,7 +39,7 @@ const trabalhosRouter = require("./routes/trabalhosRouter");
 const contatoRouter = require("./routes/contatoRouter");
 
 // Arquivos
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // ROTAS
 app.use("/trabalhos", trabalhosRouter);

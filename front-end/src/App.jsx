@@ -7,7 +7,6 @@ import Trabalhos from "./pages/trabalhos"
 import Contato from "./pages/contato"
 
 import Header from "./components/Header"
-import Footer from "./components/Footer"
 
 function App() {
   const location = useLocation();
@@ -25,8 +24,6 @@ function App() {
           }}/>
         </SlideRoutes>
       </Switch>
-      {/* <Footer /> */}
-
     </>
   );
 }

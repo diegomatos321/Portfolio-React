@@ -30,22 +30,23 @@ contatoRouter.post("/", [
 
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP,
-      port: 587,
-      secure: false, // true for 465, false for other ports
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true, // true for 465, false for other ports
       auth: {
-        user: process.env.EMAILLOGIN,
-        pass: process.env.EMAILPASSWORD,
-      },
-      tls: {
-        rejectUnauthorized: true
+        type: 'OAuth2',
+        user: process.env.EMAIL_USERNAME,
+        clientId: process.env.OAUTH_CLIENT_ID,
+        clientSecret: process.env.OAUTH_CLIENT_SECRET,
+        refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+        accessToken: process.env.OAUTH_ACESS_TOKEN
       }
     });
 
     // send mail with defined transport object
     const info = await transporter.sendMail({
-      from: `Portfolio <${process.env.EMAILLOGIN}>`, // sender address
-      to: `${process.env.EMAILRECEIVER2}`, // list of receivers
+      from: `Portfolio <devdiegomatos.com.br>`, // sender address
+      to: `${process.env.EMAIL_RECEIVER}`, // list of receivers
       subject: assunto, // Subject line
       text: "E-mail enviado pelo Portfolio", // plain text body
       html: output, // html body
@@ -70,7 +71,6 @@ contatoRouter.post("/", [
     });
 
   } catch (error) {
-
     res.status(500).send({
       mensagem: {
         tipo: "error",
